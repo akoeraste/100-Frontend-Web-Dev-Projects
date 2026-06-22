@@ -1170,6 +1170,15 @@ img {
   color: var(--text-tertiary);
 }
 
+.footer-copy a {
+  color: var(--accent-1);
+  transition: var(--transition);
+}
+
+.footer-copy a:hover {
+  color: var(--accent-2);
+}
+
 .back-to-top {
   width: 42px;
   height: 42px;
