@@ -4,7 +4,7 @@ A clean, modern portfolio template built with pure HTML, CSS, and vanilla JavaSc
 
 ## Preview
 
-![Dark Mode](https://img.shields.io/badge/theme-dark%20mode-0e0c0a?style=flat-square) ![Light Mode](https://img.shields.io/badge/theme-light%20mode-faf8f5?style=flat-square&labelColor=6b6560)
+![Personal Portfolio Page](../../images/001.png)
 
 ## Features
 

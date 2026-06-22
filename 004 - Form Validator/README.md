@@ -4,7 +4,7 @@ A signup form with real-time validation, password strength meter, and animated s
 
 ## Preview
 
-![Theme](https://img.shields.io/badge/theme-dark%20%2B%20emerald-0b0d10?style=flat-square&labelColor=34d399)
+![Form Validator](../../images/004.png)
 
 ## Features
 

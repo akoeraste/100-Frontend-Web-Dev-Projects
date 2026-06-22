@@ -4,7 +4,7 @@ An interactive color picker tool where you can pick, adjust, preview, copy, and 
 
 ## Preview
 
-![Theme](https://img.shields.io/badge/theme-dark%20utility-0c0c10?style=flat-square&labelColor=6366f1)
+![Color Picker App](../../images/005.png)
 
 ## Features
 

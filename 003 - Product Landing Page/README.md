@@ -4,7 +4,7 @@ A premium product landing page for the **Samsung Galaxy S26 Ultra**. Dark, sleek
 
 ## Preview
 
-![Theme](https://img.shields.io/badge/theme-dark%20tech-030308?style=flat-square&labelColor=4a7cff)
+![Product Landing Page — Samsung Galaxy S26 Ultra](../../images/003.png)
 
 ## Features
 
