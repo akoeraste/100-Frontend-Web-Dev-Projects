@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Picker — Pick, Preview & Copy</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <div class="logo-dot"></div>
+        <span>ColorPick</span>
+      </div>
+      <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener" class="nav-badge">
+        <i class="fa-brands fa-github"></i>
+        100 Projects
+      </a>
+    </div>
+  </nav>
+
+  <main class="app">
+
+    <!-- ===== LIVE PREVIEW ===== -->
+    <section class="preview-section">
+      <div class="preview-card" id="previewCard">
+        <div class="preview-label">Live Preview</div>
+        <div class="preview-text" id="previewText">Aa</div>
+      </div>
+    </section>
+
+    <!-- ===== PICKER CONTROLS ===== -->
+    <section class="controls">
+
+      <!-- Native Color Input -->
+      <div class="picker-block">
+        <label>Pick a Color</label>
+        <div class="native-picker-wrap">
+          <input type="color" id="colorInput" value="#6366f1" />
+          <span class="picker-hint">Click to open color picker</span>
+        </div>
+      </div>
+
+      <!-- HEX Input -->
+      <div class="value-block">
+        <label>HEX</label>
+        <div class="value-row">
+          <span class="value-hash">#</span>
+          <input type="text" id="hexInput" maxlength="6" value="6366f1" spellcheck="false" />
+          <button class="copy-btn" data-target="hex" aria-label="Copy HEX">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- RGB Inputs -->
+      <div class="value-block">
+        <label>RGB</label>
+        <div class="rgb-row">
+          <div class="rgb-field">
+            <span class="rgb-label">R</span>
+            <input type="number" id="rInput" min="0" max="255" value="99" />
+          </div>
+          <div class="rgb-field">
+            <span class="rgb-label">G</span>
+            <input type="number" id="gInput" min="0" max="255" value="102" />
+          </div>
+          <div class="rgb-field">
+            <span class="rgb-label">B</span>
+            <input type="number" id="bInput" min="0" max="255" value="241" />
+          </div>
+          <button class="copy-btn" data-target="rgb" aria-label="Copy RGB">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- HSL Inputs -->
+      <div class="value-block">
+        <label>HSL</label>
+        <div class="rgb-row">
+          <div class="rgb-field">
+            <span class="rgb-label">H</span>
+            <input type="number" id="hInput" min="0" max="360" value="239" />
+          </div>
+          <div class="rgb-field">
+            <span class="rgb-label">S</span>
+            <input type="number" id="sInput" min="0" max="100" value="84" />
+          </div>
+          <div class="rgb-field">
+            <span class="rgb-label">L</span>
+            <input type="number" id="lInput" min="0" max="100" value="67" />
+          </div>
+          <button class="copy-btn" data-target="hsl" aria-label="Copy HSL">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Sliders -->
+      <div class="sliders-block">
+        <label>Adjust</label>
+        <div class="slider-row">
+          <span class="slider-label">R</span>
+          <input type="range" id="rSlider" min="0" max="255" value="99" class="slider slider-r" />
+          <span class="slider-value" id="rVal">99</span>
+        </div>
+        <div class="slider-row">
+          <span class="slider-label">G</span>
+          <input type="range" id="gSlider" min="0" max="255" value="102" class="slider slider-g" />
+          <span class="slider-value" id="gVal">102</span>
+        </div>
+        <div class="slider-row">
+          <span class="slider-label">B</span>
+          <input type="range" id="bSlider" min="0" max="255" value="241" class="slider slider-b" />
+          <span class="slider-value" id="bVal">241</span>
+        </div>
+      </div>
+
+      <!-- Random + Contrast -->
+      <div class="actions-row">
+        <button class="action-btn" id="randomBtn">
+          <i class="fa-solid fa-shuffle"></i>
+          Random Color
+        </button>
+        <div class="contrast-info">
+          <span class="contrast-label">Contrast</span>
+          <span class="contrast-badge" id="contrastBadge">AA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SAVED PALETTE ===== -->
+    <section class="palette-section">
+      <div class="palette-header">
+        <h3><i class="fa-solid fa-palette"></i> Saved Palette</h3>
+        <button class="clear-btn" id="clearPalette">Clear All</button>
+      </div>
+      <div class="palette-grid" id="paletteGrid">
+        <button class="add-swatch" id="addSwatch" aria-label="Save current color">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <p class="palette-hint" id="paletteHint">Click + to save the current color to your palette.</p>
+    </section>
+
+  </main>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-check"></i>
+    <span id="toastMsg">Copied!</span>
+  </div>
+
+  <footer class="footer">
+    <p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
