@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Morgan — Creative Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="10" fill="url(#logoGrad)" />
+            <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+                  font-family="Sora, sans-serif" font-weight="800" font-size="16" fill="#fff">AM</text>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="36">
+                <stop offset="0%" stop-color="#c87a48" />
+                <stop offset="100%" stop-color="#d4a55a" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">alex<span>morgan</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for freelance work
+      </div>
+      <h1 class="hero-name">
+        Creative<br />
+        <span class="gradient-text">Developer</span> &<br />
+        Designer
+      </h1>
+      <p class="hero-tagline" id="tagline"></p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="50">0</span><span class="hero-stat-plus">+</span>
+          <span class="hero-stat-label">Projects</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="3">0</span><span class="hero-stat-plus">+</span>
+          <span class="hero-stat-label">Years Exp.</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="20">0</span><span class="hero-stat-plus">+</span>
+          <span class="hero-stat-label">Clients</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-container">
+        <div class="hero-image-ring"></div>
+        <div class="hero-image-ring ring-2"></div>
+        <div class="hero-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&crop=face" alt="Alex Morgan" />
+        </div>
+        <div class="floating-card card-1">
+          <i class="fa-brands fa-react"></i>
+          <span>React</span>
+        </div>
+        <div class="floating-card card-2">
+          <i class="fa-brands fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="floating-card card-3">
+          <i class="fa-brands fa-figma"></i>
+          <span>Design</span>
+        </div>
+      </div>
+      <div class="hero-socials">
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-user"></i> About Me</span>
+        <h2 class="section-title reveal">I build digital experiences<br />that <span class="gradient-text">people love</span>.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="about-image-inner">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Workspace" />
+            <div class="about-image-accent"></div>
+          </div>
+          <div class="experience-badge">
+            <span class="exp-number">3+</span>
+            <span class="exp-text">Years of<br />Experience</span>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p class="about-lead">I'm a developer and designer with a passion for building clean, functional, and beautiful web applications.</p>
+          <p>I focus on the intersection of design and technology — creating things that look great and work even better. Based in San Francisco, I've worked with startups and agencies to deliver impactful digital products.</p>
+          <p>When I'm not coding, you'll find me exploring photography, reading about design systems, or contributing to open-source projects.</p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <i class="fa-solid fa-paintbrush"></i>
+              <div>
+                <strong>Design Focused</strong>
+                <span>Pixel-perfect, user-first interfaces</span>
+              </div>
+            </div>
+            <div class="highlight">
+              <i class="fa-solid fa-code"></i>
+              <div>
+                <strong>Clean Code</strong>
+                <span>Maintainable, performant solutions</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">
+            <span>Let's Talk</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag"><i class="fa-solid fa-sparkles"></i> Skills</span>
+        <h2 class="section-title reveal">My <span class="gradient-text">Toolkit</span></h2>
+        <p class="section-subtitle reveal">Technologies and tools I use to bring ideas to life.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-icon" style="--icon-color: #e34f26; --icon-bg: rgba(227, 79, 38, 0.12)">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <h3>HTML5</h3>
+          <p>Semantic, accessible markup that forms a solid foundation.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon" style="--icon-color: #1572b6; --icon-bg: rgba(21, 114, 182, 0.12)">
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+          <h3>CSS3</h3>
+          <p>Modern layouts with Grid, Flexbox, and smooth animations.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon" style="--icon-color: #f7df1e; --icon-bg: rgba(247, 223, 30, 0.12)">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <h3>JavaScript</h3>
+          <p>Interactive, dynamic experiences with clean ES6+ code.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon" style="--icon-color: #61dafb; --icon-bg: rgba(97, 218, 251, 0.12)">
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <h3>React</h3>
+          <p>Component-based UIs with hooks and modern state management.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon" style="--icon-color: #a259ff; --icon-bg: rgba(162, 89, 255, 0.12)">
+            <i class="fa-brands fa-figma"></i>
+          </div>
+          <h3>Figma</h3>
+          <p>Pixel-perfect designs and collaborative prototyping.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon" style="--icon-color: #f05032; --icon-bg: rgba(240, 80, 50, 0.12)">
+            <i class="fa-brands fa-git-alt"></i>
+          </div>
+          <h3>Git</h3>
+          <p>Version control and collaborative development workflows.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio</span>
+        <h2 class="section-title reveal">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle reveal">A selection of recent work I'm proud of.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Dashboard Project" />
+            <div class="project-overlay">
+              <div class="project-actions">
+                <a href="#" class="project-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>React</span>
+              <span>Chart.js</span>
+              <span>API</span>
+            </div>
+            <h3>Analytics Dashboard</h3>
+            <p>Real-time data visualization with interactive charts and a clean, modern UI.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=600&h=400&fit=crop" alt="E-commerce Project" />
+            <div class="project-overlay">
+              <div class="project-actions">
+                <a href="#" class="project-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>Stripe</span>
+            </div>
+            <h3>E-Commerce Platform</h3>
+            <p>Full shopping experience with cart, checkout, and integrated payment flow.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=400&fit=crop" alt="Social App Project" />
+            <div class="project-overlay">
+              <div class="project-actions">
+                <a href="#" class="project-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>React</span>
+              <span>Firebase</span>
+              <span>CSS</span>
+            </div>
+            <h3>Social Media App</h3>
+            <p>Real-time messaging and content sharing with an engaging modern UI.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag"><i class="fa-solid fa-envelope"></i> Contact</span>
+        <h2 class="section-title reveal">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle reveal">Have a project in mind? I'd love to hear about it.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+            <h4>Email</h4>
+            <p>hello@alexmorgan.dev</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h4>Location</h4>
+            <p>San Francisco, CA</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+            <h4>Phone</h4>
+            <p>+1 (555) 123-4567</p>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" placeholder="Subject" required />
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <rect width="36" height="36" rx="10" fill="url(#logoGrad3)" />
+                <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+                      font-family="Sora, sans-serif" font-weight="800" font-size="16" fill="#fff">AM</text>
+                <defs>
+                  <linearGradient id="logoGrad3" x1="0" y1="0" x2="36" y2="36">
+                    <stop offset="0%" stop-color="#c87a48" />
+                    <stop offset="100%" stop-color="#d4a55a" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="logo-text">alex<span>morgan</span></span>
+          </a>
+          <p class="footer-tagline">Developer & designer crafting thoughtful digital experiences. Based in San Francisco, open to remote work worldwide.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+          </div>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Social</h4>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Dribbble</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="mailto:hello@alexmorgan.dev">hello@alexmorgan.dev</a>
+            <a href="#">+1 (555) 123-4567</a>
+            <a href="#">San Francisco, CA</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 Alex Morgan. All rights reserved.</p>
+        <a href="#hero" class="back-to-top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
