@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- ===== CLOCK ===== -->
+    <main class="clock-wrapper">
+
+      <!-- Greeting -->
+      <p class="greeting" id="greeting">Good Evening</p>
+
+      <!-- Time -->
+      <div class="time-row">
+        <div class="time-unit">
+          <span class="digit" id="hours">00</span>
+          <span class="unit-label">Hours</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="time-unit">
+          <span class="digit" id="minutes">00</span>
+          <span class="unit-label">Minutes</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="time-unit">
+          <span class="digit" id="seconds">00</span>
+          <span class="unit-label">Seconds</span>
+        </div>
+        <div class="ampm-badge" id="ampm">PM</div>
+      </div>
+
+      <!-- Date -->
+      <p class="date-row" id="dateRow">Saturday, June 21, 2025</p>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button class="ctrl-btn active" id="btn12" data-format="12">12H</button>
+        <button class="ctrl-btn" id="btn24" data-format="24">24H</button>
+      </div>
+
+    </main>
+
+    <!-- ===== WORLD CLOCKS ===== -->
+    <section class="world-section">
+      <h3 class="world-title"><i class="fa-solid fa-globe"></i> World Clocks</h3>
+      <div class="world-grid">
+        <div class="world-card">
+          <div class="world-city">London</div>
+          <div class="world-time" id="london">00:00</div>
+          <div class="world-zone">GMT+1</div>
+        </div>
+        <div class="world-card">
+          <div class="world-city">New York</div>
+          <div class="world-time" id="newyork">00:00</div>
+          <div class="world-zone">GMT-4</div>
+        </div>
+        <div class="world-card">
+          <div class="world-city">Tokyo</div>
+          <div class="world-time" id="tokyo">00:00</div>
+          <div class="world-zone">GMT+9</div>
+        </div>
+        <div class="world-card">
+          <div class="world-city">Dubai</div>
+          <div class="world-time" id="dubai">00:00</div>
+          <div class="world-zone">GMT+4</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p>
+    </footer>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

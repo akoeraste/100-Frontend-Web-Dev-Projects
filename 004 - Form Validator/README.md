@@ -4,7 +4,7 @@ A signup form with real-time validation, password strength meter, and animated s
 
 ## Preview
 
-![Form Validator](../../images/004.png)
+![Form Validator](../images/004.png)
 
 ## Features
 

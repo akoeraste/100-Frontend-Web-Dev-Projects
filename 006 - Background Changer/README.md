@@ -4,7 +4,7 @@ Click a button to randomize the page background. Supports solid colors, linear/r
 
 ## Preview
 
-![Background Changer](../../images/006.png)
+![Background Changer](../images/006.png)
 
 ## Features
 

@@ -4,7 +4,7 @@ A tribute to **DJ Arafat** (Ange Didier Houon) — the King of Coupé-Décalé. 
 
 ## Preview
 
-![Tribute Page — DJ Arafat](../../images/002.png)
+![Tribute Page — DJ Arafat](../images/002.png)
 
 ## Features
 

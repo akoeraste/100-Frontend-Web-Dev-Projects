@@ -4,7 +4,7 @@ An interactive color picker tool where you can pick, adjust, preview, copy, and 
 
 ## Preview
 
-![Color Picker App](../../images/005.png)
+![Color Picker App](../images/005.png)
 
 ## Features
 

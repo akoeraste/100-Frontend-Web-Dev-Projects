@@ -4,7 +4,7 @@ A premium product landing page for the **Samsung Galaxy S26 Ultra**. Dark, sleek
 
 ## Preview
 
-![Product Landing Page — Samsung Galaxy S26 Ultra](../../images/003.png)
+![Product Landing Page — Samsung Galaxy S26 Ultra](../images/003.png)
 
 ## Features
 

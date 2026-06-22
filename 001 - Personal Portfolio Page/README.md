@@ -4,7 +4,7 @@ A clean, modern portfolio template built with pure HTML, CSS, and vanilla JavaSc
 
 ## Preview
 
-![Personal Portfolio Page](../../images/001.png)
+![Personal Portfolio Page](../images/001.png)
 
 ## Features
 
