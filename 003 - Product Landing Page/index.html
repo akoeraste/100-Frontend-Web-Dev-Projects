@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samsung Galaxy S26 Ultra — Next Level Intelligence</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <svg class="samsung-logo" viewBox="0 0 80 14" fill="currentColor" width="90">
+          <text x="0" y="12" font-family="Outfit, sans-serif" font-weight="800" font-size="14" letter-spacing="1">SAMSUNG</text>
+        </svg>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#design">Design</a></li>
+        <li><a href="#camera">Camera</a></li>
+        <li><a href="#ai">Galaxy AI</a></li>
+        <li><a href="#performance">Performance</a></li>
+        <li><a href="#specs">Specs</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#order" class="btn btn-nav">Pre-Order</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Introducing</div>
+      <h1 class="hero-title">
+        Galaxy S26 <span class="ultra">Ultra</span>
+      </h1>
+      <p class="hero-subtitle">The most intelligent Galaxy ever. Titanium design. 200MP camera. Galaxy AI built in.</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">Pre-Order Now</a>
+        <a href="#design" class="btn btn-ghost">Explore</a>
+      </div>
+      <div class="hero-price">Starting at <strong>$1,299.99</strong></div>
+    </div>
+    <div class="hero-phone">
+      <div class="phone-glow"></div>
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=800&fit=crop" alt="Galaxy S26 Ultra screen" />
+        </div>
+        <div class="phone-notch"></div>
+      </div>
+      <div class="phone-shadow"></div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESIGN ===== -->
+  <section class="section design" id="design">
+    <div class="container">
+      <div class="section-tag center">Design</div>
+      <h2 class="section-title center reveal">Forged in <span class="accent">Titanium</span></h2>
+      <p class="section-sub center reveal">The slimmest, strongest Galaxy ever made. Precision-crafted from aerospace-grade titanium with Corning Gorilla Armor 2 — built to last, designed to stun.</p>
+      <div class="design-showcase reveal">
+        <div class="design-image">
+          <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&h=500&fit=crop" alt="Galaxy S26 design" />
+          <div class="design-image-overlay"></div>
+        </div>
+        <div class="design-features">
+          <div class="design-feat">
+            <div class="feat-num">6.9"</div>
+            <div class="feat-label">QHD+ Dynamic<br />AMOLED Display</div>
+          </div>
+          <div class="design-feat">
+            <div class="feat-num">6.8<span>mm</span></div>
+            <div class="feat-label">Ultra-Thin<br />Profile</div>
+          </div>
+          <div class="design-feat">
+            <div class="feat-num">2600<span>nits</span></div>
+            <div class="feat-label">Peak Outdoor<br />Brightness</div>
+          </div>
+        </div>
+      </div>
+      <div class="color-picker reveal">
+        <h3>Choose Your Color</h3>
+        <div class="colors">
+          <button class="color-swatch active" data-color="Titanium Black" style="background: #1a1a1e" aria-label="Titanium Black"></button>
+          <button class="color-swatch" data-color="Titanium Silver" style="background: #c4c4c8" aria-label="Titanium Silver"></button>
+          <button class="color-swatch" data-color="Titanium Blue" style="background: #4a6fa5" aria-label="Titanium Blue"></button>
+          <button class="color-swatch" data-color="Titanium Violet" style="background: #7b6b8d" aria-label="Titanium Violet"></button>
+        </div>
+        <span class="color-name" id="colorName">Titanium Black</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAMERA ===== -->
+  <section class="section camera" id="camera">
+    <div class="container">
+      <div class="camera-hero reveal">
+        <div class="camera-text">
+          <div class="section-tag">Camera</div>
+          <h2 class="section-title reveal">See Every <span class="accent">Detail</span></h2>
+          <p class="section-sub reveal">The 200MP ProVisual Engine captures the world in extraordinary clarity. Every shot is refined by AI — from dusk to dawn, wide to zoom.</p>
+          <div class="camera-specs-list">
+            <div class="cam-spec reveal">
+              <span class="cam-num">200<small>MP</small></span>
+              <span class="cam-label">Wide Lens</span>
+            </div>
+            <div class="cam-spec reveal">
+              <span class="cam-num">50<small>MP</small></span>
+              <span class="cam-label">Ultrawide</span>
+            </div>
+            <div class="cam-spec reveal">
+              <span class="cam-num">50<small>MP</small></span>
+              <span class="cam-label">5x Optical Zoom</span>
+            </div>
+            <div class="cam-spec reveal">
+              <span class="cam-num">12<small>MP</small></span>
+              <span class="cam-label">Front Camera</span>
+            </div>
+          </div>
+        </div>
+        <div class="camera-image reveal">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=700&h=500&fit=crop" alt="Shot on Galaxy S26" />
+          <div class="camera-badge">
+            <i class="fa-solid fa-camera"></i>
+            Shot on Galaxy S26 Ultra
+          </div>
+        </div>
+      </div>
+      <div class="camera-gallery">
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop" alt="Nature shot" />
+          <div class="gallery-tag">Ultrawide</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=300&fit=crop" alt="Night shot" />
+          <div class="gallery-tag">Nightography</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=400&h=300&fit=crop" alt="Zoom shot" />
+          <div class="gallery-tag">5x Zoom</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALAXY AI ===== -->
+  <section class="section ai" id="ai">
+    <div class="ai-glow"></div>
+    <div class="container">
+      <div class="section-tag center">Galaxy AI</div>
+      <h2 class="section-title center reveal">Intelligence at <span class="accent">Your Fingertips</span></h2>
+      <p class="section-sub center reveal">Galaxy AI transforms how you create, communicate, and search. Powered by on-device and cloud AI, it understands you like never before.</p>
+      <div class="ai-grid">
+        <div class="ai-card ai-featured reveal">
+          <div class="ai-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Circle to Search</h3>
+          <p>Circle anything on screen to instantly search it. No copying, no switching apps. Just circle and know.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon"><i class="fa-solid fa-language"></i></div>
+          <h3>Live Translate</h3>
+          <p>Real-time phone call translation in 16 languages. Speak naturally — AI handles the rest.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3>Note Assist</h3>
+          <p>Auto-summarize meetings, format notes, and generate action items from voice recordings.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon"><i class="fa-solid fa-image"></i></div>
+          <h3>Generative Edit</h3>
+          <p>Move, remove, or resize objects in photos. AI fills the gaps — no one can tell the difference.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon"><i class="fa-solid fa-message"></i></div>
+          <h3>Chat Assist</h3>
+          <p>AI suggests replies, adjusts tone, and translates messages — right inside your keyboard.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>On-Device AI</h3>
+          <p>Personal data stays on your phone. Samsung Knox encrypts it all. AI power, zero compromise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERFORMANCE ===== -->
+  <section class="section performance" id="performance">
+    <div class="container">
+      <div class="section-tag center">Performance</div>
+      <h2 class="section-title center reveal">Raw <span class="accent">Power</span></h2>
+      <p class="section-sub center reveal">Snapdragon 8 Elite for Galaxy. The fastest chip ever in a Samsung phone — built for all-day performance and next-gen gaming.</p>
+      <div class="perf-grid">
+        <div class="perf-card reveal">
+          <div class="perf-ring" data-percent="40">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg" />
+              <circle cx="50" cy="50" r="42" class="ring-fill" />
+            </svg>
+            <span class="perf-ring-label">40%</span>
+          </div>
+          <h4>Faster CPU</h4>
+          <p>vs Galaxy S25 Ultra</p>
+        </div>
+        <div class="perf-card reveal">
+          <div class="perf-ring" data-percent="50">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg" />
+              <circle cx="50" cy="50" r="42" class="ring-fill" />
+            </svg>
+            <span class="perf-ring-label">50%</span>
+          </div>
+          <h4>Faster GPU</h4>
+          <p>vs Galaxy S25 Ultra</p>
+        </div>
+        <div class="perf-card reveal">
+          <div class="perf-ring" data-percent="60">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg" />
+              <circle cx="50" cy="50" r="42" class="ring-fill" />
+            </svg>
+            <span class="perf-ring-label">60%</span>
+          </div>
+          <h4>Faster NPU</h4>
+          <p>AI processing power</p>
+        </div>
+      </div>
+      <div class="battery-strip reveal">
+        <div class="battery-item">
+          <i class="fa-solid fa-battery-full"></i>
+          <div>
+            <strong>5,500 mAh</strong>
+            <span>All-day battery</span>
+          </div>
+        </div>
+        <div class="battery-sep"></div>
+        <div class="battery-item">
+          <i class="fa-solid fa-bolt"></i>
+          <div>
+            <strong>65W Fast Charge</strong>
+            <span>50% in 20 minutes</span>
+          </div>
+        </div>
+        <div class="battery-sep"></div>
+        <div class="battery-item">
+          <i class="fa-solid fa-wifi"></i>
+          <div>
+            <strong>Qi2 Wireless</strong>
+            <span>Magnetic charging</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPECS ===== -->
+  <section class="section specs" id="specs">
+    <div class="container">
+      <div class="section-tag center">Specifications</div>
+      <h2 class="section-title center reveal">The Full <span class="accent">Picture</span></h2>
+      <div class="specs-table reveal">
+        <div class="spec-row">
+          <span class="spec-key">Display</span>
+          <span class="spec-val">6.9" QHD+ Dynamic AMOLED 2X, 120Hz LTPO</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Processor</span>
+          <span class="spec-val">Snapdragon 8 Elite for Galaxy</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">RAM / Storage</span>
+          <span class="spec-val">12GB / 256GB, 512GB, 1TB</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Rear Camera</span>
+          <span class="spec-val">200MP Wide + 50MP Ultrawide + 50MP 5x Telephoto</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Front Camera</span>
+          <span class="spec-val">12MP with Autofocus</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Battery</span>
+          <span class="spec-val">5,500 mAh, 65W Wired, Qi2 Wireless</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">OS</span>
+          <span class="spec-val">Android 16, One UI 8 with Galaxy AI</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Durability</span>
+          <span class="spec-val">IP68, Gorilla Armor 2, Titanium Frame</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Connectivity</span>
+          <span class="spec-val">5G, Wi-Fi 7, Bluetooth 5.4, UWB, NFC</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">S Pen</span>
+          <span class="spec-val">Built-in, Bluetooth, Air Actions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRE-ORDER CTA ===== -->
+  <section class="section order" id="order">
+    <div class="order-glow"></div>
+    <div class="container">
+      <div class="order-content reveal">
+        <div class="order-tag">Limited Time Offer</div>
+        <h2 class="order-title">Get Galaxy S26 Ultra</h2>
+        <p class="order-sub">Pre-order now and receive a free Galaxy Watch Ultra 2 and 6 months of Samsung Care+.</p>
+        <div class="order-price">
+          <span class="price-from">Starting at</span>
+          <span class="price-amount">$1,299<sup>99</sup></span>
+        </div>
+        <div class="order-actions">
+          <a href="#" class="btn btn-primary btn-lg">Pre-Order Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#" class="btn btn-ghost">Compare Models</a>
+        </div>
+        <div class="order-perks">
+          <div class="perk"><i class="fa-solid fa-truck-fast"></i> Free Shipping</div>
+          <div class="perk"><i class="fa-solid fa-arrow-rotate-left"></i> Free Returns</div>
+          <div class="perk"><i class="fa-solid fa-credit-card"></i> 0% Financing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg class="samsung-logo" viewBox="0 0 80 14" fill="currentColor" width="100">
+            <text x="0" y="12" font-family="Outfit, sans-serif" font-weight="800" font-size="14" letter-spacing="1">SAMSUNG</text>
+          </svg>
+          <p>Galaxy S26 Ultra. The next chapter in mobile intelligence.</p>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#design">Design</a>
+            <a href="#camera">Camera</a>
+            <a href="#ai">Galaxy AI</a>
+            <a href="#performance">Performance</a>
+            <a href="#specs">Specs</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">Find a Store</a>
+            <a href="#">Trade-In</a>
+            <a href="#">Samsung Care+</a>
+          </div>
+          <div class="footer-col">
+            <h4>Follow</h4>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+            <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Samsung Electronics. All rights reserved.</p>
+        <p>Built as part of the <a href="#">100 Frontend Web Dev Projects</a> challenge.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
