@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Changer — Click to Randomize</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body id="body">
+
+  <div class="app">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="logo">
+        <i class="fa-solid fa-palette"></i>
+        <span>BG Changer</span>
+      </div>
+      <div class="color-display">
+        <span class="color-code" id="colorCode">#1a1a2e</span>
+        <button class="copy-btn" id="copyBtn" aria-label="Copy color">
+          <i class="fa-regular fa-copy"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main">
+      <h1 class="title" id="title">Click to Change</h1>
+      <p class="subtitle" id="subtitle">Pick a mode and start generating beautiful backgrounds.</p>
+
+      <!-- Mode Selector -->
+      <div class="mode-selector">
+        <button class="mode-btn active" data-mode="solid">
+          <i class="fa-solid fa-circle"></i>
+          Solid
+        </button>
+        <button class="mode-btn" data-mode="gradient">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+          Gradient
+        </button>
+        <button class="mode-btn" data-mode="mesh">
+          <i class="fa-solid fa-shapes"></i>
+          Mesh
+        </button>
+      </div>
+
+      <!-- Generate Button -->
+      <button class="generate-btn" id="generateBtn">
+        <i class="fa-solid fa-shuffle"></i>
+        <span>Generate</span>
+      </button>
+
+      <!-- Gradient Direction (only for gradient mode) -->
+      <div class="direction-row" id="directionRow">
+        <span class="dir-label">Direction</span>
+        <div class="dir-options">
+          <button class="dir-btn active" data-dir="to right" aria-label="Left to right"><i class="fa-solid fa-arrow-right"></i></button>
+          <button class="dir-btn" data-dir="to bottom right" aria-label="Diagonal"><i class="fa-solid fa-arrow-down-long" style="transform:rotate(-45deg)"></i></button>
+          <button class="dir-btn" data-dir="to bottom" aria-label="Top to bottom"><i class="fa-solid fa-arrow-down"></i></button>
+          <button class="dir-btn" data-dir="to bottom left" aria-label="Diagonal left"><i class="fa-solid fa-arrow-down-long" style="transform:rotate(45deg)"></i></button>
+          <button class="dir-btn" data-dir="radial" aria-label="Radial"><i class="fa-solid fa-circle-dot"></i></button>
+        </div>
+      </div>
+
+      <!-- Keyboard hint -->
+      <p class="hint">Press <kbd>Space</kbd> to generate</p>
+    </main>
+
+    <!-- ===== HISTORY ===== -->
+    <section class="history">
+      <div class="history-header">
+        <h3><i class="fa-solid fa-clock-rotate-left"></i> History</h3>
+        <button class="clear-btn" id="clearHistory">Clear</button>
+      </div>
+      <div class="history-grid" id="historyGrid"></div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p>
+    </footer>
+
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"><i class="fa-solid fa-check"></i> <span id="toastMsg">Copied!</span></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
