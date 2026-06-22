@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — Form Validator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- ===== LEFT PANEL ===== -->
+    <aside class="panel-left">
+      <div class="panel-content">
+        <div class="panel-logo">
+          <div class="logo-icon">
+            <i class="fa-solid fa-shield-check"></i>
+          </div>
+          <span class="logo-text">FormGuard</span>
+        </div>
+        <h1 class="panel-title">Create your<br /><span class="highlight">account</span></h1>
+        <p class="panel-sub">Join thousands of users. Secure, fast, and beautifully validated.</p>
+        <div class="panel-features">
+          <div class="panel-feat">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <strong>Instant Feedback</strong>
+              <span>Real-time validation as you type</span>
+            </div>
+          </div>
+          <div class="panel-feat">
+            <i class="fa-solid fa-lock"></i>
+            <div>
+              <strong>Secure by Design</strong>
+              <span>Strong password requirements enforced</span>
+            </div>
+          </div>
+          <div class="panel-feat">
+            <i class="fa-solid fa-check-double"></i>
+            <div>
+              <strong>Error-Free Submission</strong>
+              <span>Every field verified before sending</span>
+            </div>
+          </div>
+        </div>
+        <div class="panel-art">
+          <div class="art-ring r1"></div>
+          <div class="art-ring r2"></div>
+          <div class="art-ring r3"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== RIGHT PANEL — FORM ===== -->
+    <main class="panel-right">
+      <div class="form-wrapper">
+        <div class="form-header">
+          <h2>Sign Up</h2>
+          <p>Fill in the details below to get started.</p>
+        </div>
+
+        <form id="signupForm" novalidate>
+          <!-- Full Name -->
+          <div class="form-group" id="nameGroup">
+            <label for="fullName">Full Name</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-user input-icon"></i>
+              <input type="text" id="fullName" placeholder="John Doe" autocomplete="name" />
+              <i class="fa-solid fa-circle-check status-icon success-icon"></i>
+              <i class="fa-solid fa-circle-xmark status-icon error-icon"></i>
+            </div>
+            <span class="msg"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group" id="emailGroup">
+            <label for="email">Email Address</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-envelope input-icon"></i>
+              <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+              <i class="fa-solid fa-circle-check status-icon success-icon"></i>
+              <i class="fa-solid fa-circle-xmark status-icon error-icon"></i>
+            </div>
+            <span class="msg"></span>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group" id="phoneGroup">
+            <label for="phone">Phone Number</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-phone input-icon"></i>
+              <input type="tel" id="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+              <i class="fa-solid fa-circle-check status-icon success-icon"></i>
+              <i class="fa-solid fa-circle-xmark status-icon error-icon"></i>
+            </div>
+            <span class="msg"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group" id="passwordGroup">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock input-icon"></i>
+              <input type="password" id="password" placeholder="Min. 8 characters" autocomplete="new-password" />
+              <button type="button" class="toggle-pw" id="togglePw" aria-label="Toggle password visibility">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <div class="pw-strength">
+              <div class="pw-bar"><div class="pw-fill" id="pwFill"></div></div>
+              <span class="pw-label" id="pwLabel">Strength</span>
+            </div>
+            <ul class="pw-rules" id="pwRules">
+              <li id="ruleLen"><i class="fa-solid fa-circle"></i> At least 8 characters</li>
+              <li id="ruleUpper"><i class="fa-solid fa-circle"></i> One uppercase letter</li>
+              <li id="ruleLower"><i class="fa-solid fa-circle"></i> One lowercase letter</li>
+              <li id="ruleNum"><i class="fa-solid fa-circle"></i> One number</li>
+              <li id="ruleSpecial"><i class="fa-solid fa-circle"></i> One special character (!@#$...)</li>
+            </ul>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group" id="confirmGroup">
+            <label for="confirmPw">Confirm Password</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock input-icon"></i>
+              <input type="password" id="confirmPw" placeholder="Re-enter password" autocomplete="new-password" />
+              <i class="fa-solid fa-circle-check status-icon success-icon"></i>
+              <i class="fa-solid fa-circle-xmark status-icon error-icon"></i>
+            </div>
+            <span class="msg"></span>
+          </div>
+
+          <!-- Terms -->
+          <div class="form-group checkbox-group" id="termsGroup">
+            <label class="checkbox-label">
+              <input type="checkbox" id="terms" />
+              <span class="custom-check"><i class="fa-solid fa-check"></i></span>
+              <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+            </label>
+            <span class="msg"></span>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="btn-text">Create Account</span>
+            <span class="btn-loading"><i class="fa-solid fa-spinner fa-spin"></i></span>
+            <span class="btn-success"><i class="fa-solid fa-check"></i> Account Created!</span>
+          </button>
+        </form>
+
+        <p class="form-footer">Already have an account? <a href="#">Sign in</a></p>
+      </div>
+
+      <footer class="page-footer">
+        <p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
