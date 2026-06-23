@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palindrome Checker</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="header">
+      <div class="logo">
+        <i class="fa-solid fa-rotate-left"></i>
+        <span>PalinCheck</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="title">Is it a <span class="accent">Palindrome</span>?</h1>
+      <p class="subtitle">Type a word, phrase, or sentence and find out instantly.</p>
+
+      <!-- Input -->
+      <div class="input-card">
+        <div class="input-row">
+          <input type="text" id="textInput" placeholder="e.g. racecar, A man a plan a canal Panama" autocomplete="off" spellcheck="false" />
+          <button class="check-btn" id="checkBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="input-meta">
+          <span id="charCount">0 characters</span>
+          <button class="clear-link" id="clearBtn">Clear</button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="result-card" id="resultCard">
+        <div class="result-icon" id="resultIcon">
+          <i class="fa-solid fa-circle-question"></i>
+        </div>
+        <h2 class="result-title" id="resultTitle">Enter something above</h2>
+        <p class="result-sub" id="resultSub">We'll check it for you.</p>
+
+        <!-- Letter Breakdown -->
+        <div class="breakdown" id="breakdown"></div>
+
+        <!-- Reversed -->
+        <div class="reversed-row" id="reversedRow">
+          <span class="reversed-label">Reversed:</span>
+          <span class="reversed-text" id="reversedText"></span>
+        </div>
+      </div>
+
+      <!-- Examples -->
+      <div class="examples">
+        <span class="examples-label">Try:</span>
+        <button class="example-btn" data-text="racecar">racecar</button>
+        <button class="example-btn" data-text="Was it a car or a cat I saw">Was it a car or a cat I saw</button>
+        <button class="example-btn" data-text="hello">hello</button>
+        <button class="example-btn" data-text="madam">madam</button>
+        <button class="example-btn" data-text="Never odd or even">Never odd or even</button>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-row" id="statsRow">
+        <div class="stat">
+          <span class="stat-num" id="totalChecked">0</span>
+          <span class="stat-label">Checked</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num" id="totalPalin">0</span>
+          <span class="stat-label">Palindromes</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num" id="totalNot">0</span>
+          <span class="stat-label">Not</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p>
+    </footer>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

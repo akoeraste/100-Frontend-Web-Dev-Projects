@@ -1,0 +1,34 @@
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#080810;--bg-card:#101118;--bg-input:#161620;--border:rgba(255,255,255,.06);--border-hover:rgba(255,255,255,.12);--pink:#f472b6;--pink-glow:rgba(244,114,182,.1);--text:#eef0f6;--text-2:#7c819a;--text-3:#4a4e64;--font:'Inter',sans-serif;--display:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace;--tr:.3s cubic-bezier(.4,0,.2,1);--r:14px;--rs:10px}
+html{font-size:16px}body{font-family:var(--font);color:var(--text);background:var(--bg);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:var(--text-2);text-decoration:none}a:hover{color:var(--text)}
+.app{max-width:540px;margin:0 auto;padding:32px 24px 48px;min-height:100vh;display:flex;flex-direction:column}
+.header{margin-bottom:40px}.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:1rem;font-weight:700}.logo i{color:var(--pink)}
+.main{flex:1}.title{font-family:var(--display);font-size:clamp(2rem,5vw,2.6rem);font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
+.accent{background:linear-gradient(135deg,#f472b6,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.subtitle{font-size:.92rem;color:var(--text-2);margin-bottom:28px}
+.input-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:24px}
+.date-fields{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:12px;margin-bottom:20px}
+.date-field label{display:block;font-size:.72rem;font-weight:600;color:var(--text-3);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em}
+.date-field input{width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:var(--rs);background:var(--bg-input);font-family:var(--mono);font-size:1.1rem;font-weight:600;color:var(--text);outline:none;text-align:center;transition:var(--tr);-moz-appearance:textfield}
+.date-field input::-webkit-inner-spin-button,.date-field input::-webkit-outer-spin-button{-webkit-appearance:none}
+.date-field input::placeholder{color:var(--text-3)}.date-field input:focus{border-color:rgba(244,114,182,.3);box-shadow:0 0 0 3px var(--pink-glow)}
+.calc-btn{width:100%;padding:15px;border:none;border-radius:var(--rs);background:linear-gradient(135deg,#f472b6,#c084fc);color:#fff;font-family:var(--font);font-size:.95rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:var(--tr)}
+.calc-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(244,114,182,.2)}
+.error-msg{font-size:.82rem;color:#f87171;text-align:center;margin-top:12px;min-height:20px}
+.results{display:none}.results.visible{display:block;animation:fadeUp .5s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.age-main{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.age-block{padding:28px 16px;border-radius:var(--r);background:var(--bg-card);border:1px solid var(--border);text-align:center}
+.age-num{display:block;font-family:var(--display);font-size:2.6rem;font-weight:800;margin-bottom:4px;background:linear-gradient(135deg,#f472b6,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.age-label{font-size:.72rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em}
+.fun-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:20px}
+.fact{padding:18px;border-radius:var(--r);background:var(--bg-card);border:1px solid var(--border);display:flex;align-items:center;gap:14px;transition:var(--tr)}
+.fact:hover{border-color:var(--border-hover);transform:translateY(-2px)}
+.fact i{font-size:1.1rem;color:var(--pink);flex-shrink:0}
+.fact strong{display:block;font-family:var(--mono);font-size:.95rem;font-weight:700}
+.fact span{font-size:.72rem;color:var(--text-3)}
+.next-bday{padding:18px;border-radius:var(--r);background:var(--pink-glow);border:1px solid rgba(244,114,182,.15);text-align:center;font-size:.88rem;color:var(--text-2)}
+.next-bday strong{color:var(--pink)}
+.footer{text-align:center;padding-top:32px;margin-top:auto}.footer p{font-size:.78rem;color:var(--text-3)}
+@media(max-width:480px){.age-main{grid-template-columns:repeat(3,1fr);gap:8px}.age-num{font-size:2rem}.fun-facts{grid-template-columns:1fr}}

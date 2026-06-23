@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header"><div class="logo"><i class="fa-solid fa-temperature-half"></i> <span>TempConvert</span></div></header>
+    <main class="main">
+      <h1 class="title">Temperature <span class="accent">Converter</span></h1>
+      <p class="subtitle">Convert between Celsius, Fahrenheit, and Kelvin on the fly.</p>
+      <div class="converter-card">
+        <div class="temp-field">
+          <label>Celsius (°C)</label>
+          <div class="temp-input"><input type="number" id="celsius" placeholder="0" step="any" /><span class="unit">°C</span></div>
+          <div class="temp-bar"><div class="temp-fill fill-c" id="barC"></div></div>
+        </div>
+        <div class="swap-icon"><i class="fa-solid fa-arrows-up-down"></i></div>
+        <div class="temp-field">
+          <label>Fahrenheit (°F)</label>
+          <div class="temp-input"><input type="number" id="fahrenheit" placeholder="32" step="any" /><span class="unit">°F</span></div>
+          <div class="temp-bar"><div class="temp-fill fill-f" id="barF"></div></div>
+        </div>
+        <div class="swap-icon"><i class="fa-solid fa-arrows-up-down"></i></div>
+        <div class="temp-field">
+          <label>Kelvin (K)</label>
+          <div class="temp-input"><input type="number" id="kelvin" placeholder="273.15" step="any" /><span class="unit">K</span></div>
+          <div class="temp-bar"><div class="temp-fill fill-k" id="barK"></div></div>
+        </div>
+      </div>
+      <div class="info-cards">
+        <div class="info-card"><i class="fa-solid fa-snowflake"></i><div><strong>Water Freezes</strong><span>0°C / 32°F / 273.15K</span></div></div>
+        <div class="info-card"><i class="fa-solid fa-fire"></i><div><strong>Water Boils</strong><span>100°C / 212°F / 373.15K</span></div></div>
+        <div class="info-card"><i class="fa-solid fa-user"></i><div><strong>Body Temp</strong><span>37°C / 98.6°F / 310.15K</span></div></div>
+      </div>
+    </main>
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

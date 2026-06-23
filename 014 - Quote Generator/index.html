@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quote Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <main class="main">
+      <div class="quote-card" id="quoteCard">
+        <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+        <p class="quote-text" id="quoteText">Click the button below for your first dose of inspiration.</p>
+        <div class="quote-author" id="quoteAuthor">— You</div>
+      </div>
+      <div class="actions">
+        <button class="gen-btn" id="genBtn"><i class="fa-solid fa-shuffle"></i> New Quote</button>
+        <div class="share-btns">
+          <button class="share-btn" id="copyBtn" title="Copy"><i class="fa-regular fa-copy"></i></button>
+          <a class="share-btn" id="twitterBtn" href="#" target="_blank" rel="noopener" title="Share on X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <p class="hint">Press <kbd>Space</kbd> for a new quote</p>
+    </main>
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <div class="toast" id="toast"><i class="fa-solid fa-check"></i> Copied!</div>
+  <script src="js/script.js"></script>
+</body>
+</html>

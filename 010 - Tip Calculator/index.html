@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header"><div class="logo"><i class="fa-solid fa-receipt"></i> <span>TipSplit</span></div></header>
+    <main class="main">
+      <h1 class="title">Tip <span class="accent">Calculator</span></h1>
+      <p class="subtitle">Split the bill, calculate the tip, keep it fair.</p>
+      <div class="card">
+        <div class="field"><label>Bill Amount</label><div class="input-wrap"><span class="prefix">$</span><input type="number" id="billInput" placeholder="0.00" min="0" step="0.01" /></div></div>
+        <div class="field"><label>Tip Percentage</label>
+          <div class="tip-btns">
+            <button class="tip-btn" data-tip="5">5%</button>
+            <button class="tip-btn" data-tip="10">10%</button>
+            <button class="tip-btn active" data-tip="15">15%</button>
+            <button class="tip-btn" data-tip="20">20%</button>
+            <button class="tip-btn" data-tip="25">25%</button>
+            <input type="number" id="customTip" placeholder="Custom" min="0" max="100" class="custom-tip" />
+          </div>
+        </div>
+        <div class="field"><label>Number of People</label>
+          <div class="people-row">
+            <button class="ppl-btn" id="pplMinus"><i class="fa-solid fa-minus"></i></button>
+            <span class="ppl-count" id="pplCount">1</span>
+            <button class="ppl-btn" id="pplPlus"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="results-card">
+        <div class="result-row"><div><span class="result-label">Tip Amount</span><span class="result-per">/ person</span></div><span class="result-value" id="tipPerson">$0.00</span></div>
+        <div class="result-divider"></div>
+        <div class="result-row"><div><span class="result-label">Total</span><span class="result-per">/ person</span></div><span class="result-value" id="totalPerson">$0.00</span></div>
+        <div class="result-divider"></div>
+        <div class="result-row total-row"><div><span class="result-label">Grand Total</span><span class="result-per">bill + tip</span></div><span class="result-value grand" id="grandTotal">$0.00</span></div>
+      </div>
+      <button class="reset-btn" id="resetBtn"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button>
+    </main>
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

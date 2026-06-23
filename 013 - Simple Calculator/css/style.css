@@ -1,0 +1,21 @@
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a10;--calc-bg:#111118;--key-num:#1c1c28;--key-num-hover:#252535;--key-fn:#2a2a3a;--key-fn-hover:#333348;--key-op:#4a7cff;--key-op-hover:#5a8cff;--key-eq:linear-gradient(135deg,#4a7cff,#8b6cff);--border:rgba(255,255,255,.04);--text:#f0f0f8;--text-dim:rgba(255,255,255,.5);--font:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace;--tr:.15s ease}
+html{font-size:16px}body{font-family:var(--font);color:var(--text);background:var(--bg);min-height:100vh;display:flex;align-items:center;justify-content:center;-webkit-font-smoothing:antialiased}
+.app{padding:24px}
+.calculator{width:340px;background:var(--calc-bg);border-radius:24px;border:1px solid var(--border);padding:24px;box-shadow:0 20px 80px rgba(0,0,0,.4)}
+.display{padding:20px 8px 24px;text-align:right;min-height:110px;display:flex;flex-direction:column;justify-content:flex-end}
+.expression{font-family:var(--mono);font-size:.88rem;font-weight:400;color:var(--text-dim);min-height:24px;margin-bottom:6px;word-break:break-all}
+.current{font-family:var(--mono);font-size:2.8rem;font-weight:300;letter-spacing:-.02em;line-height:1;word-break:break-all;transition:font-size .15s ease}
+.current.shrink{font-size:2rem}
+.keypad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.key{border:none;border-radius:14px;font-family:var(--font);font-size:1.2rem;font-weight:600;cursor:pointer;padding:18px;transition:background var(--tr),transform var(--tr);-webkit-tap-highlight-color:transparent}
+.key:active{transform:scale(.94)}
+.key.num{background:var(--key-num);color:var(--text)}.key.num:hover{background:var(--key-num-hover)}
+.key.fn{background:var(--key-fn);color:var(--text-dim)}.key.fn:hover{background:var(--key-fn-hover)}
+.key.op{background:var(--key-op);color:#fff}.key.op:hover{background:var(--key-op-hover)}
+.key.op.active-op{box-shadow:inset 0 0 0 2px #fff}
+.key.eq{background:var(--key-eq);color:#fff;grid-column:span 2}.key.eq:hover{opacity:.9}
+.key.zero{grid-column:span 2}
+.footer{text-align:center;padding-top:24px}.footer p{font-size:.75rem;color:rgba(255,255,255,.2)}
+.footer a{color:rgba(255,255,255,.35);text-decoration:none}.footer a:hover{color:rgba(255,255,255,.55)}
+@media(max-width:400px){.calculator{width:100%;border-radius:20px;padding:18px}.current{font-size:2.2rem}.key{padding:15px;font-size:1.05rem}}
