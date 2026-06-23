@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <h1 class="title">Rock Paper <span class="accent">Scissors</span></h1>
+    <div class="scoreboard">
+      <div class="score you"><span class="score-label">You</span><span class="score-num" id="yourScore">0</span></div>
+      <div class="score-vs">VS</div>
+      <div class="score cpu"><span class="score-label">CPU</span><span class="score-num" id="cpuScore">0</span></div>
+    </div>
+    <div class="arena">
+      <div class="player-pick"><div class="pick-circle" id="yourPick"><i class="fa-solid fa-question"></i></div><span>You</span></div>
+      <div class="result-badge" id="resultBadge">Choose your move</div>
+      <div class="player-pick"><div class="pick-circle" id="cpuPick"><i class="fa-solid fa-question"></i></div><span>CPU</span></div>
+    </div>
+    <div class="choices">
+      <button class="choice-btn" data-choice="rock"><span class="choice-emoji">🪨</span><span class="choice-name">Rock</span></button>
+      <button class="choice-btn" data-choice="paper"><span class="choice-emoji">📄</span><span class="choice-name">Paper</span></button>
+      <button class="choice-btn" data-choice="scissors"><span class="choice-emoji">✂️</span><span class="choice-name">Scissors</span></button>
+    </div>
+    <button class="reset-btn" id="resetBtn"><i class="fa-solid fa-arrow-rotate-left"></i> Reset Score</button>
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

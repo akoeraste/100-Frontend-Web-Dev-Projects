@@ -1,0 +1,37 @@
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#080810;--card:#101118;--input:#161620;--border:rgba(255,255,255,.06);--border-h:rgba(255,255,255,.12);--teal:#2dd4bf;--teal-g:rgba(45,212,191,.1);--green:#34d399;--amber:#fbbf24;--red:#f87171;--text:#eef0f6;--t2:#7c819a;--t3:#4a4e64;--font:'Inter',sans-serif;--disp:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace;--tr:.3s cubic-bezier(.4,0,.2,1);--r:14px;--rs:10px}
+body{font-family:var(--font);color:var(--text);background:var(--bg);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:var(--t2);text-decoration:none}a:hover{color:var(--text)}
+.app{max-width:480px;margin:0 auto;padding:32px 24px 48px;min-height:100vh;display:flex;flex-direction:column}
+.header{margin-bottom:40px}.logo{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-size:1rem;font-weight:700}.logo i{color:var(--teal)}
+.main{flex:1}.title{font-family:var(--disp);font-size:clamp(2rem,5vw,2.6rem);font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
+.accent{background:linear-gradient(135deg,#2dd4bf,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.subtitle{font-size:.92rem;color:var(--t2);margin-bottom:28px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px;margin-bottom:24px}
+.unit-toggle{display:flex;gap:4px;padding:4px;border-radius:var(--rs);background:rgba(255,255,255,.04);border:1px solid var(--border);margin-bottom:20px}
+.unit-btn{flex:1;padding:9px;border:none;border-radius:7px;background:transparent;color:var(--t2);font-family:var(--font);font-size:.82rem;font-weight:600;cursor:pointer;transition:var(--tr)}
+.unit-btn.active{background:var(--teal-g);color:var(--teal)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.fields.hidden{display:none}
+.field label{display:block;font-size:.72rem;font-weight:600;color:var(--t3);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em}
+.field input{width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:var(--rs);background:var(--input);font-family:var(--mono);font-size:1.1rem;font-weight:600;color:var(--text);outline:none;text-align:center;transition:var(--tr);-moz-appearance:textfield}
+.field input::-webkit-inner-spin-button,.field input::-webkit-outer-spin-button{-webkit-appearance:none}
+.field input::placeholder{color:var(--t3)}.field input:focus{border-color:rgba(45,212,191,.3);box-shadow:0 0 0 3px var(--teal-g)}
+.calc-btn{width:100%;padding:15px;border:none;border-radius:var(--rs);background:linear-gradient(135deg,#2dd4bf,#34d399);color:#000;font-family:var(--font);font-size:.95rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:var(--tr)}
+.calc-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(45,212,191,.2)}
+.result{display:none;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px;text-align:center}
+.result.visible{display:block;animation:fadeUp .4s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.bmi-value{font-size:1rem;color:var(--t2);margin-bottom:20px}.bmi-value strong{font-family:var(--disp);font-size:2.8rem;font-weight:800;display:block;margin-top:4px}
+.bmi-gauge{margin-bottom:20px}
+.gauge-track{height:8px;border-radius:8px;background:linear-gradient(90deg,var(--teal) 0%,var(--green) 35%,var(--amber) 65%,var(--red) 100%);position:relative;margin-bottom:8px}
+.gauge-marker{position:absolute;top:-4px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--card);box-shadow:0 2px 8px rgba(0,0,0,.4);transition:left .6s cubic-bezier(.4,0,.2,1);left:0}
+.gauge-labels{display:flex;justify-content:space-between;font-size:.65rem;color:var(--t3);font-weight:600}
+.bmi-category{font-family:var(--disp);font-size:1.1rem;font-weight:700;margin-bottom:8px;padding:8px 20px;border-radius:100px;display:inline-block}
+.bmi-category.under{color:var(--teal);background:var(--teal-g)}
+.bmi-category.normal{color:var(--green);background:rgba(52,211,153,.1)}
+.bmi-category.over{color:var(--amber);background:rgba(251,191,36,.1)}
+.bmi-category.obese{color:var(--red);background:rgba(248,113,113,.1)}
+.bmi-info{font-size:.85rem;color:var(--t2);margin-top:12px;line-height:1.6}
+.footer{text-align:center;padding-top:32px;margin-top:auto}.footer p{font-size:.78rem;color:var(--t3)}
+@media(max-width:400px){.fields{grid-template-columns:1fr}}

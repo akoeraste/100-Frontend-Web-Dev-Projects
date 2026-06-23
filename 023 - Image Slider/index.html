@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="slider" id="slider">
+      <div class="slides" id="slides">
+        <div class="slide"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1000&h=560&fit=crop" alt="Mountain Valley" /><div class="slide-caption"><h3>Mountain Valley</h3><p>Breathtaking peaks under golden light</p></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1000&h=560&fit=crop" alt="Starry Night" /><div class="slide-caption"><h3>Starry Night</h3><p>A sky full of stars over snowy mountains</p></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1000&h=560&fit=crop" alt="Misty Forest" /><div class="slide-caption"><h3>Misty Forest</h3><p>Sunlight breaking through the morning fog</p></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1000&h=560&fit=crop" alt="Golden Lake" /><div class="slide-caption"><h3>Golden Lake</h3><p>Calm waters reflecting the sunset</p></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=1000&h=560&fit=crop" alt="Ocean Waves" /><div class="slide-caption"><h3>Ocean Waves</h3><p>The rhythm of the sea at dawn</p></div></div>
+      </div>
+      <button class="nav-btn prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="nav-btn next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="dots" id="dots"></div>
+      <div class="auto-toggle"><button id="autoBtn" class="auto-btn playing"><i class="fa-solid fa-pause"></i></button></div>
+      <div class="counter"><span id="counterCurrent">1</span> / <span id="counterTotal">5</span></div>
+    </div>
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

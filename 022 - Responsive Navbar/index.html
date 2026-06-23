@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><span class="logo-mark">N</span> NavBar</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+        <li><a href="#services"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+        <li><a href="#portfolio"><i class="fa-solid fa-images"></i> Portfolio</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#" class="nav-cta">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home"><h1>Responsive <span>Navbar</span></h1><p>Resize the window or click the hamburger on mobile to see the navigation adapt. Features animated toggle, glassmorphism, scroll effect, and active link highlighting.</p></section>
+    <section class="section" id="about"><div class="section-content"><h2>About</h2><p>This navbar features a glassmorphism background on scroll, smooth mobile slide-in menu, animated hamburger toggle, and active section tracking as you scroll through the page.</p></div></section>
+    <section class="section alt" id="services"><div class="section-content"><h2>Services</h2><p>The responsive design breaks from a horizontal layout to a full-screen mobile overlay at 768px. Each link has an icon and hover animation. The CTA button sits in the nav for quick access.</p></div></section>
+    <section class="section" id="portfolio"><div class="section-content"><h2>Portfolio</h2><p>Built with pure HTML, CSS, and vanilla JavaScript. No frameworks, no libraries beyond Font Awesome for icons and Google Fonts for typography. Clean and lightweight.</p></div></section>
+    <section class="section alt" id="contact"><div class="section-content"><h2>Contact</h2><p>The active nav link updates automatically as you scroll between sections using Intersection Observer. Try scrolling through the page and watch the nav links highlight.</p></div></section>
+  </main>
+
+  <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

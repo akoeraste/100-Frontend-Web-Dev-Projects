@@ -1,0 +1,35 @@
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#08080e;--card:#101118;--input:#161620;--border:rgba(255,255,255,.06);--border-h:rgba(255,255,255,.12);--green:#34d399;--green-g:rgba(52,211,153,.1);--red:#f87171;--text:#eef0f6;--t2:#7c819a;--t3:#4a4e64;--font:'Inter',sans-serif;--disp:'Outfit',sans-serif;--tr:.3s cubic-bezier(.4,0,.2,1);--r:14px;--rs:10px}
+body{font-family:var(--font);color:var(--text);background:var(--bg);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:var(--t2);text-decoration:none}a:hover{color:var(--text)}
+.app{max-width:520px;margin:0 auto;padding:32px 24px 48px}
+.header{margin-bottom:28px}.title{font-family:var(--disp);font-size:1.8rem;font-weight:800;display:flex;align-items:center;gap:12px}
+.title i{color:var(--green);font-size:1.4rem}
+.accent{background:linear-gradient(135deg,#34d399,#2dd4bf);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.add-row{display:flex;gap:8px;margin-bottom:20px}
+.add-row input{flex:1;padding:15px 18px;border:1.5px solid var(--border);border-radius:var(--rs);background:var(--input);font-family:var(--font);font-size:.92rem;color:var(--text);outline:none;transition:var(--tr)}
+.add-row input::placeholder{color:var(--t3)}.add-row input:focus{border-color:rgba(52,211,153,.3);box-shadow:0 0 0 3px var(--green-g)}
+.add-btn{width:52px;border:none;border-radius:var(--rs);background:linear-gradient(135deg,#34d399,#2dd4bf);color:#000;font-size:1.1rem;cursor:pointer;transition:var(--tr);display:flex;align-items:center;justify-content:center}
+.add-btn:hover{transform:scale(1.05);box-shadow:0 4px 16px rgba(52,211,153,.2)}
+.filters{display:flex;gap:6px;margin-bottom:20px;padding:4px;border-radius:var(--rs);background:var(--card);border:1px solid var(--border)}
+.filter-btn{flex:1;padding:8px;border:none;border-radius:7px;background:transparent;color:var(--t2);font-family:var(--font);font-size:.8rem;font-weight:600;cursor:pointer;transition:var(--tr);display:flex;align-items:center;justify-content:center;gap:6px}
+.filter-btn:hover{color:var(--text)}.filter-btn.active{background:var(--green-g);color:var(--green)}
+.badge{font-size:.68rem;padding:1px 7px;border-radius:100px;background:rgba(255,255,255,.06)}
+.filter-btn.active .badge{background:rgba(52,211,153,.15)}
+.task-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.task-item{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--rs);background:var(--card);border:1px solid var(--border);transition:var(--tr);animation:slideIn .3s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.task-item:hover{border-color:var(--border-h)}
+.task-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--border-h);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.65rem;color:transparent;transition:var(--tr);flex-shrink:0}
+.task-item.done .task-check{background:var(--green);border-color:var(--green);color:#fff}
+.task-text{flex:1;font-size:.92rem;transition:var(--tr)}.task-item.done .task-text{text-decoration:line-through;color:var(--t3)}
+.task-edit{display:none;flex:1;padding:8px 12px;border:1.5px solid rgba(52,211,153,.3);border-radius:7px;background:var(--input);font-family:var(--font);font-size:.92rem;color:var(--text);outline:none}
+.task-actions{display:flex;gap:6px}
+.task-btn{width:32px;height:32px;border:none;border-radius:8px;background:transparent;color:var(--t3);font-size:.82rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.task-btn:hover{background:rgba(255,255,255,.06);color:var(--t2)}
+.task-btn.del:hover{color:var(--red)}
+.empty-msg{text-align:center;padding:40px 20px;color:var(--t3)}.empty-msg i{font-size:2rem;margin-bottom:12px;display:block;opacity:.3}.empty-msg p{font-size:.88rem}
+.clear-row{text-align:center;margin-bottom:16px;display:none}
+.clear-btn{padding:8px 20px;border:1px solid var(--border);border-radius:100px;background:transparent;color:var(--t3);font-family:var(--font);font-size:.78rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:var(--tr)}
+.clear-btn:hover{border-color:rgba(248,113,113,.2);color:var(--red)}
+.footer{text-align:center;padding-top:24px}.footer p{font-size:.78rem;color:var(--t3)}

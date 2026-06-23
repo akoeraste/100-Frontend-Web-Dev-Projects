@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header"><div class="logo"><i class="fa-solid fa-key"></i> <span>PassGen</span></div></header>
+    <main class="main">
+      <h1 class="title">Password <span class="accent">Generator</span></h1>
+      <p class="subtitle">Create secure passwords with your chosen length and characters.</p>
+      <div class="output-card">
+        <div class="output-row">
+          <span class="password-text" id="passwordText">Click Generate</span>
+          <button class="copy-btn" id="copyBtn"><i class="fa-regular fa-copy"></i></button>
+        </div>
+        <div class="strength-row"><div class="str-bar"><div class="str-fill" id="strFill"></div></div><span class="str-label" id="strLabel">—</span></div>
+      </div>
+      <div class="settings-card">
+        <div class="setting"><label>Length: <strong id="lenValue">16</strong></label><input type="range" id="lenSlider" min="6" max="64" value="16" class="slider" /></div>
+        <div class="setting toggle-setting"><label><span>Uppercase (A-Z)</span></label><label class="toggle"><input type="checkbox" id="upper" checked /><span class="toggle-track"></span></label></div>
+        <div class="setting toggle-setting"><label><span>Lowercase (a-z)</span></label><label class="toggle"><input type="checkbox" id="lower" checked /><span class="toggle-track"></span></label></div>
+        <div class="setting toggle-setting"><label><span>Numbers (0-9)</span></label><label class="toggle"><input type="checkbox" id="numbers" checked /><span class="toggle-track"></span></label></div>
+        <div class="setting toggle-setting"><label><span>Symbols (!@#$...)</span></label><label class="toggle"><input type="checkbox" id="symbols" checked /><span class="toggle-track"></span></label></div>
+      </div>
+      <button class="gen-btn" id="genBtn"><i class="fa-solid fa-shuffle"></i> Generate Password</button>
+    </main>
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <div class="toast" id="toast"><i class="fa-solid fa-check"></i> <span id="toastMsg">Copied!</span></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header"><div class="logo"><i class="fa-solid fa-heart-pulse"></i> <span>BMI Calc</span></div></header>
+    <main class="main">
+      <h1 class="title">BMI <span class="accent">Calculator</span></h1>
+      <p class="subtitle">Enter your height and weight to calculate your Body Mass Index.</p>
+      <div class="card">
+        <div class="unit-toggle"><button class="unit-btn active" data-unit="metric">Metric</button><button class="unit-btn" data-unit="imperial">Imperial</button></div>
+        <div class="fields" id="metricFields">
+          <div class="field"><label>Height (cm)</label><input type="number" id="heightCm" placeholder="175" min="1" /></div>
+          <div class="field"><label>Weight (kg)</label><input type="number" id="weightKg" placeholder="70" min="1" /></div>
+        </div>
+        <div class="fields hidden" id="imperialFields">
+          <div class="field"><label>Height (ft)</label><input type="number" id="heightFt" placeholder="5" min="1" /></div>
+          <div class="field"><label>Height (in)</label><input type="number" id="heightIn" placeholder="9" min="0" max="11" /></div>
+          <div class="field"><label>Weight (lbs)</label><input type="number" id="weightLbs" placeholder="154" min="1" /></div>
+        </div>
+        <button class="calc-btn" id="calcBtn"><i class="fa-solid fa-calculator"></i> Calculate</button>
+      </div>
+      <div class="result" id="result">
+        <div class="bmi-value">Your BMI: <strong id="bmiValue">--</strong></div>
+        <div class="bmi-gauge"><div class="gauge-track"><div class="gauge-fill" id="gaugeFill"></div><div class="gauge-marker" id="gaugeMarker"></div></div>
+          <div class="gauge-labels"><span>Underweight</span><span>Normal</span><span>Overweight</span><span>Obese</span></div>
+        </div>
+        <div class="bmi-category" id="bmiCategory"></div>
+        <p class="bmi-info" id="bmiInfo"></p>
+      </div>
+    </main>
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

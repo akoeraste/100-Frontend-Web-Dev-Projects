@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header"><div class="logo"><i class="fa-solid fa-hourglass-half"></i> <span>Countdown</span></div></header>
+    <main class="main">
+      <h1 class="title">Countdown <span class="accent">Timer</span></h1>
+      <p class="subtitle">Pick a date and watch the countdown animate towards it.</p>
+      <div class="input-card">
+        <div class="input-row">
+          <div class="field"><label>Event Name</label><input type="text" id="eventName" placeholder="My Birthday" /></div>
+          <div class="field"><label>Date & Time</label><input type="datetime-local" id="eventDate" /></div>
+        </div>
+        <button class="start-btn" id="startBtn"><i class="fa-solid fa-play"></i> Start Countdown</button>
+      </div>
+      <div class="countdown-display" id="countdownDisplay">
+        <h2 class="event-title" id="eventTitle"></h2>
+        <div class="timer-row">
+          <div class="timer-unit"><span class="timer-num" id="days">00</span><span class="timer-label">Days</span></div>
+          <span class="timer-sep">:</span>
+          <div class="timer-unit"><span class="timer-num" id="hours">00</span><span class="timer-label">Hours</span></div>
+          <span class="timer-sep">:</span>
+          <div class="timer-unit"><span class="timer-num" id="minutes">00</span><span class="timer-label">Minutes</span></div>
+          <span class="timer-sep">:</span>
+          <div class="timer-unit"><span class="timer-num" id="seconds">00</span><span class="timer-label">Seconds</span></div>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <p class="target-date" id="targetDate"></p>
+        <button class="reset-btn" id="resetBtn"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button>
+      </div>
+      <div class="done-msg" id="doneMsg"><div class="done-icon"><i class="fa-solid fa-party-horn"></i></div><h2>Time's Up!</h2><p id="doneText">The event has arrived!</p><button class="start-btn" id="doneResetBtn"><i class="fa-solid fa-arrow-rotate-left"></i> New Countdown</button></div>
+    </main>
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

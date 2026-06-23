@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Light / Dark Mode Toggle</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-sun-bright fa-solid fa-circle-half-stroke"></i> <span>ThemeSwitch</span></div>
+      <button class="theme-btn" id="themeBtn">
+        <div class="btn-track">
+          <i class="fa-solid fa-sun sun-icon"></i>
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <div class="btn-thumb"></div>
+        </div>
+      </button>
+    </nav>
+
+    <main class="main">
+      <section class="hero">
+        <h1>Light & Dark <span class="accent">Mode</span></h1>
+        <p>Toggle between themes and watch every element adapt smoothly. Your preference is saved locally.</p>
+      </section>
+
+      <section class="cards-section">
+        <h2>Feature Cards</h2>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><i class="fa-solid fa-palette"></i></div><h3>Adaptive Colors</h3><p>Every color, background, and border transitions smoothly between themes.</p></div>
+          <div class="card"><div class="card-icon"><i class="fa-solid fa-floppy-disk"></i></div><h3>Saved Preference</h3><p>Your theme choice persists in localStorage across browser sessions.</p></div>
+          <div class="card"><div class="card-icon"><i class="fa-solid fa-bolt"></i></div><h3>Instant Switch</h3><p>No page reload. CSS custom properties swap instantly on toggle.</p></div>
+          <div class="card"><div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div><h3>Fully Responsive</h3><p>Works on every screen size with a clean, adaptive layout.</p></div>
+        </div>
+      </section>
+
+      <section class="sample-section">
+        <h2>Sample Components</h2>
+        <div class="sample-grid">
+          <div class="sample-input"><label>Text Input</label><input type="text" placeholder="Type something..." /></div>
+          <div class="sample-input"><label>Select</label><select><option>Option One</option><option>Option Two</option><option>Option Three</option></select></div>
+          <div class="badge-row"><span class="badge b-blue">Info</span><span class="badge b-green">Success</span><span class="badge b-amber">Warning</span><span class="badge b-red">Error</span></div>
+          <div class="progress-demo"><label>Progress</label><div class="prog-track"><div class="prog-fill"></div></div></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
