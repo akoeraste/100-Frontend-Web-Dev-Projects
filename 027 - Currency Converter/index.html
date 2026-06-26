@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-coins"></i> <span>CurrencyX</span></div>
+    </nav>
+
+    <section class="hero">
+      <h1>Currency <span class="accent">Converter</span></h1>
+      <p>Real-time exchange rates. Convert between 30+ world currencies instantly.</p>
+    </section>
+
+    <div class="converter-card">
+      <div class="input-group">
+        <label>Amount</label>
+        <div class="amount-row">
+          <input type="number" id="amount" value="1" min="0" step="any" />
+        </div>
+      </div>
+
+      <div class="currency-row">
+        <div class="input-group">
+          <label>From</label>
+          <select id="fromCurrency"></select>
+        </div>
+        <button class="swap-btn" id="swapBtn"><i class="fa-solid fa-right-left"></i></button>
+        <div class="input-group">
+          <label>To</label>
+          <select id="toCurrency"></select>
+        </div>
+      </div>
+
+      <div class="result-box" id="resultBox">
+        <div class="result-main" id="resultMain">1 USD = 1 USD</div>
+        <div class="result-sub" id="resultSub">Enter an amount to convert</div>
+      </div>
+
+      <button class="convert-btn" id="convertBtn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Convert</button>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

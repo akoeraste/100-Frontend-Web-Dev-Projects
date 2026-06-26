@@ -1,0 +1,97 @@
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#08080e;--bg-2:#0e0e16;--card:#111119;--input:#161622;
+  --border:rgba(255,255,255,.06);--border-h:rgba(255,255,255,.12);
+  --text:#eef0f6;--t2:#7c819a;--t3:#4a4e64;
+  --accent:#818cf8;--accent-2:#6366f1;--accent-g:rgba(129,140,248,.1);
+  --green:#34d399;--green-bg:rgba(52,211,153,.1);--green-b:rgba(52,211,153,.4);
+  --red:#f87171;--red-bg:rgba(248,113,113,.1);--red-b:rgba(248,113,113,.4);
+  --amber:#fbbf24;
+  --font:'Inter',sans-serif;--disp:'Outfit',sans-serif;
+  --tr:.4s cubic-bezier(.4,0,.2,1);--r:14px;--rs:10px;
+  --shadow:0 4px 20px rgba(0,0,0,.2)
+}
+
+html{font-size:16px}
+body{font-family:var(--font);color:var(--text);background:var(--bg);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+
+.app{max-width:580px;margin:0 auto;padding:24px 24px 48px}
+
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-radius:var(--r);background:var(--card);border:1px solid var(--border);margin-bottom:28px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-size:1rem;font-weight:700}
+.nav-logo i{color:var(--accent);font-size:1.1rem}
+.score-badge{padding:6px 14px;border-radius:100px;background:var(--accent-g);color:var(--accent);font-size:.8rem;font-weight:600}
+
+.hidden{display:none!important}
+.accent{background:linear-gradient(135deg,#818cf8,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* Start Screen */
+.start-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:48px 32px;text-align:center}
+.start-icon{width:72px;height:72px;border-radius:50%;background:var(--accent-g);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:1.8rem;color:var(--accent)}
+.start-card h1{font-family:var(--disp);font-size:clamp(1.6rem,5vw,2.2rem);font-weight:800;margin-bottom:10px}
+.start-card p{color:var(--t2);font-size:.9rem;line-height:1.7;max-width:380px;margin:0 auto 28px}
+
+.settings{display:flex;gap:12px;margin-bottom:28px}
+.input-group{flex:1;text-align:left}
+.input-group label{display:block;font-size:.72rem;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.input-group select{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--rs);background:var(--input);font-family:var(--font);font-size:.85rem;color:var(--text);cursor:pointer;outline:none;transition:border var(--tr)}
+.input-group select:focus{border-color:var(--accent)}
+
+.primary-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border:none;border-radius:var(--rs);background:var(--accent);color:#fff;font-family:var(--font);font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s,transform .2s}
+.primary-btn:hover{background:var(--accent-2);transform:scale(1.03)}
+.primary-btn:active{transform:scale(.97)}
+
+/* Quiz Screen */
+.progress-bar{height:4px;border-radius:4px;background:var(--input);margin-bottom:20px;overflow:hidden}
+.progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),#c084fc);width:0;transition:width .4s ease}
+
+.question-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.q-counter{font-size:.82rem;color:var(--t2);font-weight:600}
+.q-timer{font-size:.85rem;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:6px}
+.q-timer.urgent{color:var(--red);animation:pulse .6s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.question-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:32px 24px;margin-bottom:16px;animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.question-text{font-family:var(--disp);font-size:1.15rem;font-weight:700;line-height:1.6;margin-bottom:24px}
+
+.options{display:flex;flex-direction:column;gap:10px}
+.option-btn{width:100%;padding:14px 18px;border:1.5px solid var(--border);border-radius:var(--rs);background:var(--input);color:var(--text);font-family:var(--font);font-size:.9rem;text-align:left;cursor:pointer;display:flex;align-items:center;gap:12px;transition:border-color .2s,background .2s,transform .15s}
+.option-btn:hover:not(.disabled){border-color:var(--accent);background:var(--accent-g);transform:translateX(4px)}
+.option-btn .letter{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0}
+.option-btn.correct{border-color:var(--green-b);background:var(--green-bg)}
+.option-btn.correct .letter{background:var(--green);color:#fff}
+.option-btn.wrong{border-color:var(--red-b);background:var(--red-bg)}
+.option-btn.wrong .letter{background:var(--red);color:#fff}
+.option-btn.disabled{cursor:default;pointer-events:none}
+
+.next-btn{margin:0 auto;display:flex}
+
+/* Result Screen */
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:48px 32px;text-align:center;animation:fadeIn .5s ease}
+.result-icon{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;color:#fff}
+.result-icon.gold{background:linear-gradient(135deg,var(--amber),#f59e0b)}
+.result-icon.silver{background:linear-gradient(135deg,#94a3b8,#64748b)}
+.result-icon.bronze{background:linear-gradient(135deg,var(--red),#dc2626)}
+.result-card h2{font-family:var(--disp);font-size:1.5rem;font-weight:800;margin-bottom:8px}
+.result-card>p{color:var(--t2);font-size:.9rem;margin-bottom:20px}
+.result-score{font-family:var(--disp);font-size:3rem;font-weight:800;color:var(--accent);margin-bottom:24px}
+
+.result-breakdown{display:flex;justify-content:center;gap:32px;margin-bottom:28px}
+.rb{display:flex;flex-direction:column;align-items:center;gap:4px}
+.rb i{font-size:1rem}
+.rb i.fa-check{color:var(--green)}
+.rb i.fa-xmark{color:var(--red)}
+.rb i.fa-clock{color:var(--amber)}
+.rb span{font-family:var(--disp);font-size:1.3rem;font-weight:700}
+.rb label{font-size:.7rem;color:var(--t3);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+
+.footer{text-align:center;padding-top:28px}.footer p{font-size:.78rem;color:var(--t3)}
+
+@media(max-width:480px){
+  .settings{flex-direction:column}
+  .start-card,.question-card,.result-card{padding:28px 18px}
+  .result-breakdown{gap:20px}
+}

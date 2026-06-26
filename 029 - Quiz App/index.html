@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-brain"></i> <span>QuizMaster</span></div>
+      <div class="score-badge" id="scoreBadge">Score: 0</div>
+    </nav>
+
+    <!-- Start Screen -->
+    <section class="screen" id="startScreen">
+      <div class="start-card">
+        <div class="start-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h1>Quiz <span class="accent">Challenge</span></h1>
+        <p>Test your knowledge with 10 random trivia questions. Pick a category and difficulty to begin.</p>
+
+        <div class="settings">
+          <div class="input-group">
+            <label>Category</label>
+            <select id="category">
+              <option value="">Any Category</option>
+              <option value="9">General Knowledge</option>
+              <option value="17">Science & Nature</option>
+              <option value="18">Computers</option>
+              <option value="21">Sports</option>
+              <option value="22">Geography</option>
+              <option value="23">History</option>
+              <option value="27">Animals</option>
+              <option value="11">Film</option>
+              <option value="12">Music</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Difficulty</label>
+            <select id="difficulty">
+              <option value="">Any Difficulty</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="primary-btn" id="startBtn"><i class="fa-solid fa-play"></i> Start Quiz</button>
+      </div>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section class="screen hidden" id="quizScreen">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="question-header">
+        <span class="q-counter" id="qCounter">Question 1 / 10</span>
+        <span class="q-timer" id="qTimer"><i class="fa-solid fa-clock"></i> 15</span>
+      </div>
+      <div class="question-card">
+        <h2 class="question-text" id="questionText">Loading...</h2>
+        <div class="options" id="options"></div>
+      </div>
+      <button class="primary-btn next-btn hidden" id="nextBtn">Next <i class="fa-solid fa-arrow-right"></i></button>
+    </section>
+
+    <!-- Result Screen -->
+    <section class="screen hidden" id="resultScreen">
+      <div class="result-card">
+        <div class="result-icon" id="resultIcon"><i class="fa-solid fa-trophy"></i></div>
+        <h2 id="resultTitle">Great Job!</h2>
+        <p id="resultMsg">You answered 7 out of 10 correctly.</p>
+        <div class="result-score" id="resultScore">70%</div>
+        <div class="result-breakdown">
+          <div class="rb"><i class="fa-solid fa-check"></i><span id="correctCount">0</span><label>Correct</label></div>
+          <div class="rb"><i class="fa-solid fa-xmark"></i><span id="wrongCount">0</span><label>Wrong</label></div>
+          <div class="rb"><i class="fa-solid fa-clock"></i><span id="skippedCount">0</span><label>Skipped</label></div>
+        </div>
+        <button class="primary-btn" id="retryBtn"><i class="fa-solid fa-rotate-right"></i> Play Again</button>
+      </div>
+    </section>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

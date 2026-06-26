@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drum Kit App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-drum"></i> <span>DrumKit</span></div>
+      <div class="volume-control">
+        <i class="fa-solid fa-volume-high"></i>
+        <input type="range" id="volume" min="0" max="100" value="70" />
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>Drum <span class="accent">Kit</span></h1>
+      <p>Press the keys or click the pads to play. Each pad triggers a unique synthesized beat.</p>
+    </section>
+
+    <div class="pads-grid" id="padsGrid">
+      <button class="pad" data-key="Q" data-sound="kick"><span class="key">Q</span><span class="label">Kick</span></button>
+      <button class="pad" data-key="W" data-sound="snare"><span class="key">W</span><span class="label">Snare</span></button>
+      <button class="pad" data-key="E" data-sound="hihat"><span class="key">E</span><span class="label">Hi-Hat</span></button>
+      <button class="pad" data-key="R" data-sound="openhat"><span class="key">R</span><span class="label">Open Hat</span></button>
+      <button class="pad" data-key="A" data-sound="tom1"><span class="key">A</span><span class="label">Tom 1</span></button>
+      <button class="pad" data-key="S" data-sound="tom2"><span class="key">S</span><span class="label">Tom 2</span></button>
+      <button class="pad" data-key="D" data-sound="clap"><span class="key">D</span><span class="label">Clap</span></button>
+      <button class="pad" data-key="F" data-sound="rim"><span class="key">F</span><span class="label">Rim</span></button>
+      <button class="pad" data-key="Z" data-sound="crash"><span class="key">Z</span><span class="label">Crash</span></button>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

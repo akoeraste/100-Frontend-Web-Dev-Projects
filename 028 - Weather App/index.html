@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-cloud-sun"></i> <span>WeatherNow</span></div>
+    </nav>
+
+    <section class="search-section">
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="cityInput" placeholder="Search for a city..." />
+        <button id="searchBtn">Search</button>
+      </div>
+    </section>
+
+    <section class="weather-card" id="weatherCard">
+      <div class="placeholder" id="placeholder">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <p>Search for a city to see the weather</p>
+      </div>
+
+      <div class="weather-content hidden" id="weatherContent">
+        <div class="weather-main">
+          <div class="weather-icon" id="weatherIcon">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <div class="temp" id="temp">--°</div>
+          <div class="description" id="description">--</div>
+          <div class="city-name" id="cityName">--</div>
+        </div>
+
+        <div class="details-grid">
+          <div class="detail"><i class="fa-solid fa-temperature-half"></i><span id="feelsLike">--°</span><label>Feels Like</label></div>
+          <div class="detail"><i class="fa-solid fa-droplet"></i><span id="humidity">--%</span><label>Humidity</label></div>
+          <div class="detail"><i class="fa-solid fa-wind"></i><span id="wind">-- km/h</span><label>Wind</label></div>
+          <div class="detail"><i class="fa-solid fa-gauge-high"></i><span id="pressure">-- hPa</span><label>Pressure</label></div>
+          <div class="detail"><i class="fa-solid fa-eye"></i><span id="visibility">-- km</span><label>Visibility</label></div>
+          <div class="detail"><i class="fa-solid fa-sun"></i><span id="uv">--</span><label>UV Index</label></div>
+        </div>
+      </div>
+
+      <div class="error hidden" id="error">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p id="errorMsg">City not found. Please try again.</p>
+      </div>
+    </section>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
