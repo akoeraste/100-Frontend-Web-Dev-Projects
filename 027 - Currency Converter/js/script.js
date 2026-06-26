@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
     { code: 'PHP', name: 'Philippine Peso', flag: '🇵🇭' }
   ];
 
+  var ratesCache = {};
+
   function populateSelects() {
     currencies.forEach(function (c) {
       var opt1 = document.createElement('option');
@@ -74,19 +76,40 @@ document.addEventListener('DOMContentLoaded', function () {
     var from = fromEl.value;
     var to = toEl.value;
 
+    if (from === to) {
+      resultMain.textContent = formatNumber(amount) + ' ' + from + ' = ' + formatNumber(amount) + ' ' + to;
+      resultSub.textContent = '1 ' + from + ' = 1 ' + to;
+      resultBox.classList.add('active');
+      return;
+    }
+
     convertBtn.disabled = true;
     convertBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Converting...';
 
-    fetch('https://api.frankfurter.app/latest?amount=' + amount + '&from=' + from + '&to=' + to)
-      .then(function (res) {
-        if (!res.ok) throw new Error('API error');
-        return res.json();
-      })
-      .then(function (data) {
-        var rate = data.rates[to];
-        var unitRate = rate / amount;
+    var fetchRates;
+    if (ratesCache[from]) {
+      fetchRates = Promise.resolve(ratesCache[from]);
+    } else {
+      fetchRates = fetch('https://open.er-api.com/v6/latest/' + from)
+        .then(function (res) {
+          if (!res.ok) throw new Error('API error');
+          return res.json();
+        })
+        .then(function (data) {
+          if (data.result !== 'success') throw new Error('API error');
+          ratesCache[from] = data.rates;
+          return data.rates;
+        });
+    }
 
-        resultMain.textContent = formatNumber(amount) + ' ' + from + ' = ' + formatNumber(rate) + ' ' + to;
+    fetchRates
+      .then(function (rates) {
+        if (!rates[to]) throw new Error('Currency not supported');
+
+        var unitRate = rates[to];
+        var converted = amount * unitRate;
+
+        resultMain.textContent = formatNumber(amount) + ' ' + from + ' = ' + formatNumber(converted) + ' ' + to;
         resultSub.textContent = '1 ' + from + ' = ' + formatNumber(unitRate) + ' ' + to;
         resultBox.classList.add('active');
       })

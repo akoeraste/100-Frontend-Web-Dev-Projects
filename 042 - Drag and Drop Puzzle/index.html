@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drag &amp; Drop Puzzle</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-puzzle-piece"></i> <span>PuzzleDrop</span></div>
+      <div class="nav-controls">
+        <select id="gridSize">
+          <option value="3">3 × 3</option>
+          <option value="4" selected>4 × 4</option>
+        </select>
+        <button class="restart-btn" id="restartBtn"><i class="fa-solid fa-shuffle"></i> Shuffle</button>
+      </div>
+    </nav>
+
+    <div class="stats-bar">
+      <div class="stat"><i class="fa-solid fa-hand-pointer"></i><span id="moves">0</span><label>Moves</label></div>
+      <div class="stat"><i class="fa-solid fa-clock"></i><span id="timer">0:00</span><label>Time</label></div>
+      <div class="stat"><i class="fa-solid fa-puzzle-piece"></i><span id="placed">0</span><label>Correct</label></div>
+    </div>
+
+    <div class="puzzle-board" id="board"></div>
+
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <div class="modal-icon"><i class="fa-solid fa-trophy"></i></div>
+        <h2>Puzzle Complete!</h2>
+        <p id="winMsg">Great job solving the puzzle.</p>
+        <div class="win-stats">
+          <div class="ws"><span id="wMoves">0</span><label>Moves</label></div>
+          <div class="ws"><span id="wTime">0:00</span><label>Time</label></div>
+        </div>
+        <button class="primary-btn" id="playAgainBtn"><i class="fa-solid fa-rotate-right"></i> Play Again</button>
+      </div>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

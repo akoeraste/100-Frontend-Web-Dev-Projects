@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-qrcode"></i> <span>QRGen</span></div>
+    </nav>
+
+    <section class="hero">
+      <h1>QR Code <span class="accent">Generator</span></h1>
+      <p>Generate a QR code from any text or URL. Download it as an image.</p>
+    </section>
+
+    <div class="generator-card">
+      <div class="input-section">
+        <div class="form-group">
+          <label>Text or URL</label>
+          <textarea id="qrInput" rows="3" placeholder="Enter text or paste a URL..."></textarea>
+        </div>
+        <div class="options-row">
+          <div class="form-group">
+            <label>Size</label>
+            <select id="qrSize">
+              <option value="150">Small (150px)</option>
+              <option value="250" selected>Medium (250px)</option>
+              <option value="400">Large (400px)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Color</label>
+            <input type="color" id="qrColor" value="#818cf8" />
+          </div>
+          <div class="form-group">
+            <label>Background</label>
+            <input type="color" id="qrBg" value="#111119" />
+          </div>
+        </div>
+        <button class="generate-btn" id="generateBtn"><i class="fa-solid fa-qrcode"></i> Generate QR Code</button>
+      </div>
+
+      <div class="preview-section">
+        <div class="qr-placeholder" id="qrPlaceholder">
+          <i class="fa-solid fa-qrcode"></i>
+          <p>Your QR code will appear here</p>
+        </div>
+        <div class="qr-result hidden" id="qrResult">
+          <img id="qrImage" src="" alt="QR Code" />
+          <div class="qr-actions">
+            <button class="action-btn" id="downloadBtn"><i class="fa-solid fa-download"></i> Download</button>
+            <button class="action-btn ghost" id="copyBtn"><i class="fa-solid fa-copy"></i> Copy URL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll Progress Bar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-bars-staggered"></i> <span>ScrollBar</span></div>
+      <span class="pct-badge" id="pctBadge">0%</span>
+    </nav>
+
+    <article class="article">
+      <h1>The Art of Building Great <span class="accent">Web Experiences</span></h1>
+      <div class="meta"><span><i class="fa-solid fa-user"></i> Alex Chen</span><span><i class="fa-solid fa-calendar"></i> Jun 26, 2026</span><span><i class="fa-solid fa-clock"></i> 8 min read</span></div>
+
+      <p>Building great web experiences is both an art and a science. It requires a deep understanding of user behavior, design principles, and the technical capabilities of modern browsers. In this article, we'll explore the key elements that make a website truly exceptional.</p>
+
+      <h2>Understanding Your Users</h2>
+      <p>The foundation of any great web experience starts with understanding who your users are and what they need. User research, personas, and journey mapping are essential tools that help you build empathy with your audience. Without this understanding, even the most beautiful design will fall flat.</p>
+      <p>Start by identifying the core tasks your users want to accomplish. Every element on the page should serve a purpose and guide users toward their goals. Remove friction wherever possible and make common actions effortless. The best interfaces feel invisible — users accomplish their tasks without thinking about the interface itself.</p>
+
+      <h2>Design Principles That Matter</h2>
+      <p>Great design isn't just about aesthetics — it's about communication. Visual hierarchy guides the eye, typography sets the tone, and whitespace gives content room to breathe. Every design decision should be intentional and serve the overall user experience.</p>
+      <p>Consistency is one of the most important principles in interface design. When elements behave predictably, users build confidence and can navigate more efficiently. This applies to everything from button styles and color coding to interaction patterns and animation timing.</p>
+      <p>Color plays a crucial role in web design. It evokes emotions, creates associations, and directs attention. A well-chosen color palette can transform a bland interface into a memorable experience. But remember — accessibility comes first. Ensure sufficient contrast ratios and never rely on color alone to convey information.</p>
+
+      <h2>Performance Is a Feature</h2>
+      <p>A beautiful website that loads slowly is a failure. Performance directly impacts user satisfaction, engagement, and conversion rates. Studies show that a one-second delay in page load time can reduce conversions by up to 7 percent.</p>
+      <p>Optimize images, minimize JavaScript bundles, leverage caching, and use lazy loading for content below the fold. Every millisecond matters. Tools like Lighthouse, WebPageTest, and Core Web Vitals give you the data you need to identify and fix performance bottlenecks.</p>
+      <p>Consider the network conditions your users face. Not everyone has a fast, reliable connection. Progressive enhancement and graceful degradation ensure your site works for everyone, from high-speed fiber to spotty mobile connections in rural areas.</p>
+
+      <h2>Responsive Design in 2026</h2>
+      <p>Responsive design has evolved far beyond media queries. Modern CSS features like Container Queries, Subgrid, and the :has() selector give developers unprecedented control over layout adaptation. The goal isn't just fitting content on different screen sizes — it's creating layouts that feel native to each device.</p>
+      <p>Think beyond phones, tablets, and desktops. Consider foldable devices, ultra-wide monitors, watches, and even car displays. Flexible layouts built with CSS Grid and Flexbox naturally adapt to these diverse form factors without requiring device-specific breakpoints.</p>
+
+      <h2>Animation and Interaction</h2>
+      <p>Thoughtful animation brings interfaces to life. Micro-interactions — the subtle responses to user actions — make digital products feel polished and intuitive. A button that subtly scales on hover, a card that lifts on focus, a smooth page transition — these details compound into an experience that feels delightful.</p>
+      <p>But restraint is essential. Too much animation creates visual noise and can trigger motion sensitivity in some users. Always provide a way to reduce motion, and respect the prefers-reduced-motion media query. The best animations are the ones users don't consciously notice but would miss if they were gone.</p>
+
+      <h2>The Future of the Web</h2>
+      <p>The web platform continues to evolve at an incredible pace. New APIs, improved CSS capabilities, and better tooling make it easier than ever to build sophisticated applications that run in the browser. Web components, WebAssembly, and WebGPU are opening doors that were previously closed to web developers.</p>
+      <p>As AI tools become integrated into the development workflow, the role of the developer shifts from writing every line of code to orchestrating and validating the output. But the fundamentals remain the same — understanding users, crafting great experiences, and building with care.</p>
+      <p>The best time to start building for the web was twenty years ago. The second best time is today. Keep learning, keep building, and keep pushing the boundaries of what's possible in the browser.</p>
+    </article>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emoji Rating</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-face-smile"></i> <span>EmojiRate</span></div>
+    </nav>
+
+    <section class="hero">
+      <h1>Emoji <span class="accent">Rating</span></h1>
+      <p>Rate items on a 1–5 scale with expressive emoji feedback.</p>
+    </section>
+
+    <div class="ratings-list" id="ratingsList">
+      <div class="rating-card" data-item="Customer Service">
+        <div class="rating-header"><h3>Customer Service</h3><span class="rating-value">Not rated</span></div>
+        <div class="emoji-row"></div>
+      </div>
+      <div class="rating-card" data-item="Product Quality">
+        <div class="rating-header"><h3>Product Quality</h3><span class="rating-value">Not rated</span></div>
+        <div class="emoji-row"></div>
+      </div>
+      <div class="rating-card" data-item="Delivery Speed">
+        <div class="rating-header"><h3>Delivery Speed</h3><span class="rating-value">Not rated</span></div>
+        <div class="emoji-row"></div>
+      </div>
+      <div class="rating-card" data-item="Value for Money">
+        <div class="rating-header"><h3>Value for Money</h3><span class="rating-value">Not rated</span></div>
+        <div class="emoji-row"></div>
+      </div>
+      <div class="rating-card" data-item="Overall Experience">
+        <div class="rating-header"><h3>Overall Experience</h3><span class="rating-value">Not rated</span></div>
+        <div class="emoji-row"></div>
+      </div>
+    </div>
+
+    <div class="summary-card hidden" id="summaryCard">
+      <h2>Your Feedback</h2>
+      <div class="summary-avg">
+        <span class="avg-emoji" id="avgEmoji"></span>
+        <span class="avg-score" id="avgScore">0.0</span>
+        <span class="avg-label">Average Rating</span>
+      </div>
+      <div class="summary-list" id="summaryList"></div>
+      <button class="primary-btn" id="resetBtn"><i class="fa-solid fa-rotate-right"></i> Reset All</button>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

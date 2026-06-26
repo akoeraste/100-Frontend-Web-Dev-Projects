@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Progress Bar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-bars-progress"></i> <span>ProgressKit</span></div>
+    </nav>
+
+    <section class="hero">
+      <h1>Animated <span class="accent">Progress</span></h1>
+      <p>Beautiful progress bar components with multiple styles and live controls.</p>
+    </section>
+
+    <!-- Controls -->
+    <div class="controls-card">
+      <div class="control-row">
+        <div class="input-group">
+          <label>Progress</label>
+          <input type="range" id="progressRange" min="0" max="100" value="0" />
+        </div>
+        <div class="value-badge" id="valueBadge">0%</div>
+      </div>
+      <div class="btn-row">
+        <button class="ctrl-btn" id="animateBtn"><i class="fa-solid fa-play"></i> Animate</button>
+        <button class="ctrl-btn ghost" id="resetBtn"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+      </div>
+    </div>
+
+    <!-- Linear bars -->
+    <div class="section-card">
+      <h2>Linear Bars</h2>
+      <div class="bar-group">
+        <div class="bar-label"><span>Default</span><span class="bar-pct pct-linear">0%</span></div>
+        <div class="bar-track"><div class="bar-fill default" data-bar></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>Striped</span><span class="bar-pct pct-linear">0%</span></div>
+        <div class="bar-track"><div class="bar-fill striped" data-bar></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>Gradient</span><span class="bar-pct pct-linear">0%</span></div>
+        <div class="bar-track"><div class="bar-fill gradient" data-bar></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>Glow</span><span class="bar-pct pct-linear">0%</span></div>
+        <div class="bar-track"><div class="bar-fill glow" data-bar></div></div>
+      </div>
+    </div>
+
+    <!-- Circular bars -->
+    <div class="section-card">
+      <h2>Circular Progress</h2>
+      <div class="circles-row">
+        <div class="circle-wrap">
+          <svg class="circle-svg" viewBox="0 0 120 120">
+            <circle class="circle-bg" cx="60" cy="60" r="52" />
+            <circle class="circle-fg purple" cx="60" cy="60" r="52" data-circle />
+          </svg>
+          <span class="circle-text pct-circle">0%</span>
+          <label>Purple</label>
+        </div>
+        <div class="circle-wrap">
+          <svg class="circle-svg" viewBox="0 0 120 120">
+            <circle class="circle-bg" cx="60" cy="60" r="52" />
+            <circle class="circle-fg green" cx="60" cy="60" r="52" data-circle />
+          </svg>
+          <span class="circle-text pct-circle">0%</span>
+          <label>Green</label>
+        </div>
+        <div class="circle-wrap">
+          <svg class="circle-svg" viewBox="0 0 120 120">
+            <circle class="circle-bg" cx="60" cy="60" r="52" />
+            <circle class="circle-fg amber" cx="60" cy="60" r="52" data-circle />
+          </svg>
+          <span class="circle-text pct-circle">0%</span>
+          <label>Amber</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step progress -->
+    <div class="section-card">
+      <h2>Step Progress</h2>
+      <div class="steps-track">
+        <div class="step-line"><div class="step-line-fill" id="stepLineFill"></div></div>
+        <div class="step" data-step="1"><div class="step-dot">1</div><span>Start</span></div>
+        <div class="step" data-step="2"><div class="step-dot">2</div><span>Process</span></div>
+        <div class="step" data-step="3"><div class="step-dot">3</div><span>Review</span></div>
+        <div class="step" data-step="4"><div class="step-dot">4</div><span>Done</span></div>
+      </div>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

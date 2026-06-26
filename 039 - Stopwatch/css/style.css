@@ -1,0 +1,76 @@
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#08080e;--bg-2:#0e0e16;--card:#111119;--input:#161622;
+  --border:rgba(255,255,255,.06);--border-h:rgba(255,255,255,.12);
+  --text:#eef0f6;--t2:#7c819a;--t3:#4a4e64;
+  --accent:#818cf8;--accent-2:#6366f1;--accent-g:rgba(129,140,248,.1);
+  --green:#34d399;--green-g:rgba(52,211,153,.12);
+  --amber:#fbbf24;--amber-g:rgba(251,191,36,.12);
+  --red:#f87171;--red-g:rgba(248,113,113,.12);
+  --font:'Inter',sans-serif;--disp:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace;
+  --tr:.4s cubic-bezier(.4,0,.2,1);--r:14px;--rs:10px;
+  --shadow:0 4px 20px rgba(0,0,0,.2)
+}
+
+html{font-size:16px}
+body{font-family:var(--font);color:var(--text);background:var(--bg);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+
+.app{max-width:460px;margin:0 auto;padding:24px 24px 48px}
+
+.navbar{display:flex;align-items:center;padding:14px 20px;border-radius:var(--r);background:var(--card);border:1px solid var(--border);margin-bottom:28px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-size:1rem;font-weight:700}
+.nav-logo i{color:var(--accent);font-size:1.1rem}
+
+.watch-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:48px 24px 36px;text-align:center;margin-bottom:20px}
+
+.display{font-family:var(--mono);font-size:3.5rem;font-weight:700;letter-spacing:2px;margin-bottom:36px;user-select:none}
+.time-part{display:inline-block;min-width:2ch}
+.colon{color:var(--t3);margin:0 2px}
+.ms-part{font-size:1.8rem;color:var(--t2)}
+
+.controls{display:flex;justify-content:center;gap:16px}
+.ctrl-btn{width:64px;height:64px;border-radius:50%;border:2px solid var(--border);background:var(--input);color:var(--text);font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s,transform .15s,box-shadow .2s}
+.ctrl-btn:hover:not(:disabled){transform:scale(1.08)}
+.ctrl-btn:active:not(:disabled){transform:scale(.95)}
+.ctrl-btn:disabled{opacity:.3;cursor:not-allowed}
+
+.ctrl-btn.start{border-color:var(--green);color:var(--green)}
+.ctrl-btn.start:hover:not(:disabled){background:var(--green-g);box-shadow:0 0 20px rgba(52,211,153,.15)}
+.ctrl-btn.start.running{border-color:var(--amber);color:var(--amber)}
+.ctrl-btn.start.running:hover{background:var(--amber-g);box-shadow:0 0 20px rgba(251,191,36,.15)}
+
+.ctrl-btn.lap{border-color:var(--accent);color:var(--accent)}
+.ctrl-btn.lap:hover:not(:disabled){background:var(--accent-g);box-shadow:0 0 20px rgba(129,140,248,.15)}
+
+.ctrl-btn.reset{border-color:var(--red);color:var(--red)}
+.ctrl-btn.reset:hover:not(:disabled){background:var(--red-g);box-shadow:0 0 20px rgba(248,113,113,.15)}
+
+/* Laps */
+.laps-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:20px 24px}
+.laps-card.hidden{display:none}
+.laps-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.laps-header h2{font-family:var(--disp);font-size:1rem;font-weight:700}
+.clear-btn{display:flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:var(--input);color:var(--t2);font-family:var(--font);font-size:.75rem;font-weight:600;cursor:pointer;transition:border-color .2s,color .2s}
+.clear-btn:hover{border-color:var(--red);color:var(--red)}
+
+.laps-list{max-height:260px;overflow-y:auto}
+.lap-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);animation:fadeIn .2s ease}
+.lap-row:last-child{border-bottom:none}
+@keyframes fadeIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+.lap-num{font-size:.8rem;font-weight:600;color:var(--t3);min-width:50px}
+.lap-split{font-family:var(--mono);font-size:.85rem;color:var(--accent);font-weight:500}
+.lap-total{font-family:var(--mono);font-size:.85rem;color:var(--t2);font-weight:500}
+
+.lap-row.best .lap-split{color:var(--green)}
+.lap-row.worst .lap-split{color:var(--red)}
+
+.footer{text-align:center;padding-top:28px}.footer p{font-size:.78rem;color:var(--t3)}
+
+@media(max-width:400px){
+  .display{font-size:2.6rem}
+  .ms-part{font-size:1.3rem}
+  .ctrl-btn{width:56px;height:56px;font-size:1rem}
+  .watch-card{padding:36px 18px 28px}
+}

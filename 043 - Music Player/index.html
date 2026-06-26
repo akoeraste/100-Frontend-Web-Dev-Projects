@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-headphones"></i> <span>MusicBox</span></div>
+    </nav>
+
+    <div class="player-card">
+      <div class="album-art" id="albumArt">
+        <i class="fa-solid fa-music"></i>
+      </div>
+      <div class="track-info">
+        <h2 id="trackTitle">Select a track</h2>
+        <p id="trackArtist">--</p>
+      </div>
+      <div class="progress-section">
+        <span class="time" id="currentTime">0:00</span>
+        <div class="progress-track" id="progressTrack">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="time" id="duration">0:00</span>
+      </div>
+      <div class="controls">
+        <button class="ctrl-btn" id="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
+        <button class="ctrl-btn play-btn" id="playBtn"><i class="fa-solid fa-play"></i></button>
+        <button class="ctrl-btn" id="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+      </div>
+      <div class="volume-row">
+        <i class="fa-solid fa-volume-low"></i>
+        <input type="range" id="volume" min="0" max="100" value="70" />
+        <i class="fa-solid fa-volume-high"></i>
+      </div>
+    </div>
+
+    <div class="playlist-card">
+      <h2>Playlist</h2>
+      <div class="playlist" id="playlist"></div>
+      <p class="playlist-note">Demo tracks generated with Web Audio API — no files needed.</p>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <audio id="audio"></audio>
+  <script src="js/script.js"></script>
+</body>
+</html>

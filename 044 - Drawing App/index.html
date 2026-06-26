@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drawing App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-paintbrush"></i> <span>DrawPad</span></div>
+    </nav>
+
+    <div class="toolbar">
+      <div class="tool-group">
+        <button class="tool-btn active" id="penTool" title="Pen"><i class="fa-solid fa-pen"></i></button>
+        <button class="tool-btn" id="eraserTool" title="Eraser"><i class="fa-solid fa-eraser"></i></button>
+      </div>
+      <div class="tool-group">
+        <input type="color" id="colorPicker" value="#818cf8" title="Color" />
+        <div class="size-control">
+          <label>Size</label>
+          <input type="range" id="brushSize" min="1" max="50" value="4" />
+          <span id="sizeLabel">4</span>
+        </div>
+      </div>
+      <div class="tool-group">
+        <button class="tool-btn" id="undoBtn" title="Undo"><i class="fa-solid fa-rotate-left"></i></button>
+        <button class="tool-btn" id="clearBtn" title="Clear"><i class="fa-solid fa-trash"></i></button>
+        <button class="tool-btn" id="saveBtn" title="Save"><i class="fa-solid fa-download"></i></button>
+      </div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

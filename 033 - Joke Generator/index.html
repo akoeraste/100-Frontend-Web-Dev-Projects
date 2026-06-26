@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joke Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-face-laugh-squint"></i> <span>JokeBox</span></div>
+    </nav>
+
+    <section class="hero">
+      <h1>Random <span class="accent">Jokes</span></h1>
+      <p>Need a laugh? Hit the button and get a fresh joke every time.</p>
+    </section>
+
+    <div class="joke-card" id="jokeCard">
+      <div class="joke-icon"><i class="fa-solid fa-quote-left"></i></div>
+      <div class="joke-text" id="jokeText">Click the button to get your first joke!</div>
+      <div class="joke-punchline hidden" id="jokePunchline"></div>
+      <button class="reveal-btn hidden" id="revealBtn"><i class="fa-solid fa-eye"></i> Reveal Punchline</button>
+    </div>
+
+    <div class="controls">
+      <div class="category-row">
+        <button class="cat-btn active" data-cat="Any">All</button>
+        <button class="cat-btn" data-cat="Programming">Programming</button>
+        <button class="cat-btn" data-cat="Pun">Pun</button>
+        <button class="cat-btn" data-cat="Misc">Misc</button>
+        <button class="cat-btn" data-cat="Dark">Dark</button>
+      </div>
+      <button class="generate-btn" id="generateBtn"><i class="fa-solid fa-wand-magic-sparkles"></i> Get Joke</button>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

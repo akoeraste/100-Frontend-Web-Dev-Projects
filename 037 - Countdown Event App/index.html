@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countdown Event App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-hourglass-half"></i> <span>EventDown</span></div>
+      <button class="add-btn" id="addBtn"><i class="fa-solid fa-plus"></i> New Event</button>
+    </nav>
+
+    <section class="hero">
+      <h1>Countdown <span class="accent">Events</span></h1>
+      <p>Set deadlines and watch the countdowns tick in real-time.</p>
+    </section>
+
+    <div class="empty-state" id="emptyState">
+      <i class="fa-solid fa-calendar-plus"></i>
+      <p>No events yet. Add one to start counting down!</p>
+    </div>
+
+    <div class="events-list" id="eventsList"></div>
+
+    <!-- Add/Edit Modal -->
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <button class="close-btn" data-close><i class="fa-solid fa-xmark"></i></button>
+        <h2 id="modalTitle">New Event</h2>
+        <form id="eventForm">
+          <div class="form-group">
+            <label>Event Name</label>
+            <input type="text" id="eventName" placeholder="e.g. Product Launch" required />
+          </div>
+          <div class="form-group">
+            <label>Date & Time</label>
+            <input type="datetime-local" id="eventDate" required />
+          </div>
+          <div class="form-group">
+            <label>Color</label>
+            <div class="color-options">
+              <button type="button" class="color-opt active" data-color="purple"></button>
+              <button type="button" class="color-opt" data-color="blue"></button>
+              <button type="button" class="color-opt" data-color="green"></button>
+              <button type="button" class="color-opt" data-color="amber"></button>
+              <button type="button" class="color-opt" data-color="pink"></button>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn ghost" data-close>Cancel</button>
+            <button type="submit" class="btn primary">Save Event</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

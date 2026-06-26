@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Video Player</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-clapperboard"></i> <span>VideoKit</span></div>
+    </nav>
+
+    <section class="hero">
+      <h1>Custom <span class="accent">Video</span> Player</h1>
+      <p>A fully custom video player with play, pause, seek, volume, speed, and fullscreen controls.</p>
+    </section>
+
+    <div class="player" id="player">
+      <video id="video" preload="metadata">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="big-play" id="bigPlay"><i class="fa-solid fa-play"></i></div>
+
+      <div class="controls" id="controls">
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="controls-row">
+          <div class="left-controls">
+            <button class="v-btn" id="playPauseBtn"><i class="fa-solid fa-play"></i></button>
+            <button class="v-btn" id="muteBtn"><i class="fa-solid fa-volume-high"></i></button>
+            <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="100" />
+            <span class="time-display"><span id="currentTime">0:00</span> / <span id="duration">0:00</span></span>
+          </div>
+          <div class="right-controls">
+            <select class="speed-select" id="speedSelect">
+              <option value="0.5">0.5x</option>
+              <option value="1" selected>1x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2x</option>
+            </select>
+            <button class="v-btn" id="fullscreenBtn"><i class="fa-solid fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

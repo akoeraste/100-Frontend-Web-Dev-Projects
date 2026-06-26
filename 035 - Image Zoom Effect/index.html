@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Zoom Effect</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-magnifying-glass-plus"></i> <span>ZoomLens</span></div>
+      <div class="zoom-level">
+        <label>Zoom:</label>
+        <select id="zoomLevel">
+          <option value="2">2x</option>
+          <option value="3" selected>3x</option>
+          <option value="4">4x</option>
+        </select>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>Image <span class="accent">Zoom</span></h1>
+      <p>Hover over any image to see a magnified detail view. Click to toggle a full-screen preview.</p>
+    </section>
+
+    <div class="gallery" id="gallery">
+      <div class="gallery-item" data-img="https://picsum.photos/id/1015/800/600">
+        <img src="https://picsum.photos/id/1015/400/300" alt="River between mountains" loading="lazy" />
+        <div class="zoom-lens"></div>
+        <div class="zoom-result"></div>
+      </div>
+      <div class="gallery-item" data-img="https://picsum.photos/id/1018/800/600">
+        <img src="https://picsum.photos/id/1018/400/300" alt="Misty lake landscape" loading="lazy" />
+        <div class="zoom-lens"></div>
+        <div class="zoom-result"></div>
+      </div>
+      <div class="gallery-item" data-img="https://picsum.photos/id/1025/800/600">
+        <img src="https://picsum.photos/id/1025/400/300" alt="Pug with head tilt" loading="lazy" />
+        <div class="zoom-lens"></div>
+        <div class="zoom-result"></div>
+      </div>
+      <div class="gallery-item" data-img="https://picsum.photos/id/1035/800/600">
+        <img src="https://picsum.photos/id/1035/400/300" alt="Mountain trail path" loading="lazy" />
+        <div class="zoom-lens"></div>
+        <div class="zoom-result"></div>
+      </div>
+      <div class="gallery-item" data-img="https://picsum.photos/id/1043/800/600">
+        <img src="https://picsum.photos/id/1043/400/300" alt="Man walking in city" loading="lazy" />
+        <div class="zoom-lens"></div>
+        <div class="zoom-result"></div>
+      </div>
+      <div class="gallery-item" data-img="https://picsum.photos/id/1059/800/600">
+        <img src="https://picsum.photos/id/1059/400/300" alt="Mountainous landscape" loading="lazy" />
+        <div class="zoom-lens"></div>
+        <div class="zoom-result"></div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lb-close" id="lbClose"><i class="fa-solid fa-xmark"></i></button>
+      <img id="lbImage" src="" alt="Full preview" />
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

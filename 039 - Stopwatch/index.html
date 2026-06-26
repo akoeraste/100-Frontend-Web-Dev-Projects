@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-stopwatch"></i> <span>StopWatch</span></div>
+    </nav>
+
+    <div class="watch-card">
+      <div class="display">
+        <span class="time-part" id="hours">00</span>
+        <span class="colon">:</span>
+        <span class="time-part" id="minutes">00</span>
+        <span class="colon">:</span>
+        <span class="time-part" id="seconds">00</span>
+        <span class="ms-part">.<span id="milliseconds">00</span></span>
+      </div>
+
+      <div class="controls">
+        <button class="ctrl-btn start" id="startBtn"><i class="fa-solid fa-play"></i></button>
+        <button class="ctrl-btn lap" id="lapBtn" disabled><i class="fa-solid fa-flag"></i></button>
+        <button class="ctrl-btn reset" id="resetBtn" disabled><i class="fa-solid fa-rotate-right"></i></button>
+      </div>
+    </div>
+
+    <div class="laps-card hidden" id="lapsCard">
+      <div class="laps-header">
+        <h2>Laps</h2>
+        <button class="clear-btn" id="clearLapsBtn"><i class="fa-solid fa-trash"></i> Clear</button>
+      </div>
+      <div class="laps-list" id="lapsList"></div>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

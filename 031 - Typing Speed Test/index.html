@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-keyboard"></i> <span>TypeRush</span></div>
+      <button class="restart-btn" id="restartBtn"><i class="fa-solid fa-rotate-right"></i> Restart</button>
+    </nav>
+
+    <section class="stats-bar">
+      <div class="stat"><i class="fa-solid fa-gauge-high"></i><span id="wpm">0</span><label>WPM</label></div>
+      <div class="stat"><i class="fa-solid fa-bullseye"></i><span id="accuracy">100%</span><label>Accuracy</label></div>
+      <div class="stat"><i class="fa-solid fa-clock"></i><span id="timer">60</span><label>Seconds</label></div>
+      <div class="stat"><i class="fa-solid fa-font"></i><span id="chars">0</span><label>Chars</label></div>
+    </section>
+
+    <div class="text-display" id="textDisplay"></div>
+
+    <textarea class="type-input" id="typeInput" placeholder="Start typing here to begin..." autofocus></textarea>
+
+    <!-- Result overlay -->
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <div class="modal-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+        <h2>Time's Up!</h2>
+        <p id="resultMsg">Here's how you did.</p>
+        <div class="result-stats">
+          <div class="rs"><span id="rWpm">0</span><label>WPM</label></div>
+          <div class="rs"><span id="rAcc">0%</span><label>Accuracy</label></div>
+          <div class="rs"><span id="rChars">0</span><label>Characters</label></div>
+          <div class="rs"><span id="rWords">0</span><label>Words</label></div>
+        </div>
+        <button class="primary-btn" id="retryBtn"><i class="fa-solid fa-rotate-right"></i> Try Again</button>
+      </div>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

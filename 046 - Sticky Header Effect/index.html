@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sticky Header Effect</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="nav-logo"><i class="fa-solid fa-thumbtack"></i> <span>StickyHead</span></div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="app">
+    <section class="hero" id="home">
+      <h1>Sticky <span class="accent">Header</span></h1>
+      <p>Scroll down and watch the header shrink, gain a shadow, and stay pinned to the top of the page.</p>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Features</h2>
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon"><i class="fa-solid fa-arrow-down-short-wide"></i></div><h3>Shrinks on Scroll</h3><p>Header padding decreases as you scroll past the hero section.</p></div>
+        <div class="card"><div class="card-icon"><i class="fa-solid fa-moon"></i></div><h3>Shadow Appears</h3><p>A subtle shadow fades in to separate the header from content.</p></div>
+        <div class="card"><div class="card-icon"><i class="fa-solid fa-palette"></i></div><h3>Background Shift</h3><p>Background gains more opacity when the header becomes sticky.</p></div>
+        <div class="card"><div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div><h3>Fully Responsive</h3><p>Works on all screen sizes with a clean, adaptive layout.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About This Demo</h2>
+      <p class="section-text">This project demonstrates the sticky header pattern used in modern websites. As you scroll, the header transitions smoothly — shrinking in height, gaining a frosted glass background, and adding a subtle box-shadow. The effect is achieved with pure JavaScript scroll detection and CSS transitions.</p>
+      <p class="section-text">The header uses <code>position: fixed</code> and JavaScript adds a <code>.scrolled</code> class when the user scrolls past a threshold. All visual changes are handled by CSS transitions for smooth 60fps animations.</p>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="section-text">This is a placeholder section to add enough scrollable content for the sticky header effect. In a real project, you'd have a contact form or additional content here.</p>
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon"><i class="fa-solid fa-envelope"></i></div><h3>Email</h3><p>hello@example.com</p></div>
+        <div class="card"><div class="card-icon"><i class="fa-solid fa-location-dot"></i></div><h3>Location</h3><p>Somewhere in the world</p></div>
+      </div>
+    </section>
+
+    <section class="spacer"></section>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
