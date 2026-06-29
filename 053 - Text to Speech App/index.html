@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text to Speech</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-logo"><i class="fa-solid fa-volume-high"></i> <span>SpeakIt</span></div>
+    </nav>
+
+    <section class="hero">
+      <h1>Text to <span class="accent">Speech</span></h1>
+      <p>Type or paste any text and let the browser read it aloud with adjustable voice settings.</p>
+    </section>
+
+    <div class="tts-card">
+      <div class="form-group">
+        <label>Text</label>
+        <textarea id="textInput" rows="5" placeholder="Type or paste text here...">Hello! Welcome to the Text to Speech app. Type anything and click Speak to hear it read aloud.</textarea>
+      </div>
+
+      <div class="settings-row">
+        <div class="form-group">
+          <label>Voice</label>
+          <select id="voiceSelect"></select>
+        </div>
+      </div>
+
+      <div class="sliders-row">
+        <div class="slider-group">
+          <label>Rate <span id="rateVal">1</span></label>
+          <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1" />
+        </div>
+        <div class="slider-group">
+          <label>Pitch <span id="pitchVal">1</span></label>
+          <input type="range" id="pitch" min="0" max="2" step="0.1" value="1" />
+        </div>
+        <div class="slider-group">
+          <label>Volume <span id="volumeVal">1</span></label>
+          <input type="range" id="volume" min="0" max="1" step="0.1" value="1" />
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="primary-btn" id="speakBtn"><i class="fa-solid fa-play"></i> Speak</button>
+        <button class="secondary-btn" id="pauseBtn" disabled><i class="fa-solid fa-pause"></i> Pause</button>
+        <button class="secondary-btn" id="stopBtn" disabled><i class="fa-solid fa-stop"></i> Stop</button>
+      </div>
+
+      <div class="status-bar">
+        <div class="status-indicator" id="statusDot"></div>
+        <span id="statusText">Ready</span>
+      </div>
+    </div>
+
+    <footer class="footer"><p>Built with love as part of the <a href="https://github.com/akoeraste/100-Frontend-Web-Dev-Projects" target="_blank" rel="noopener">100 Frontend Web Dev Projects</a> challenge.</p></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

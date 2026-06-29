@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Chat App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <!-- Login screen -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-icon"><i class="fa-solid fa-comments"></i></div>
+      <h1>Local <span class="accent">Chat</span></h1>
+      <p>Real-time chat across browser tabs using localStorage events.</p>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="nameInput" placeholder="Enter your display name..." maxlength="20" />
+      </div>
+      <div class="color-pick">
+        <label>Color</label>
+        <div class="color-options" id="colorOptions">
+          <button class="color-opt active" data-color="#818cf8"></button>
+          <button class="color-opt" data-color="#34d399"></button>
+          <button class="color-opt" data-color="#f472b6"></button>
+          <button class="color-opt" data-color="#fbbf24"></button>
+          <button class="color-opt" data-color="#22d3ee"></button>
+          <button class="color-opt" data-color="#f87171"></button>
+        </div>
+      </div>
+      <button class="join-btn" id="joinBtn"><i class="fa-solid fa-right-to-bracket"></i> Join Chat</button>
+    </div>
+  </div>
+
+  <!-- Chat screen -->
+  <div class="chat-screen hidden" id="chatScreen">
+    <div class="app">
+      <nav class="navbar">
+        <div class="nav-logo"><i class="fa-solid fa-comments"></i> <span>LocalChat</span></div>
+        <div class="nav-right">
+          <span class="user-badge" id="userBadge">User</span>
+          <button class="leave-btn" id="leaveBtn"><i class="fa-solid fa-right-from-bracket"></i></button>
+        </div>
+      </nav>
+
+      <div class="chat-info">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>Open this page in another tab and join with a different name to chat!</span>
+      </div>
+
+      <div class="chat-container" id="chatContainer"></div>
+
+      <div class="input-bar">
+        <input type="text" id="msgInput" placeholder="Type a message..." autocomplete="off" />
+        <button class="send-btn" id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
