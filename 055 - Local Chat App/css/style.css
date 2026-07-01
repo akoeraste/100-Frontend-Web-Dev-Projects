@@ -76,3 +76,4 @@ a{color:var(--accent);text-decoration:none}
 .send-btn:hover{background:var(--accent-2)}
 
 @media(max-width:480px){.message{max-width:90%}.login-card{padding:32px 20px}}
+.footer{text-align:center;padding-top:20px}.footer p{font-size:.78rem;color:var(--t3)}.footer a{color:var(--accent);text-decoration:none}.footer a:hover{text-decoration:underline}
